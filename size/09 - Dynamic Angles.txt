@@ -1,0 +1,15 @@
+-- 7 Billion Humans (2053) --
+-- 9: Dynamic Angles --
+
+-- Target Size: 5
+-- Size: 5
+-- Target Speed: 6
+-- Speed: 13
+
+a:
+step s
+pickup c
+if nw == datacube:
+	drop
+endif
+jump a
