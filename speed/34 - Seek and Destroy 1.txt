@@ -1,0 +1,25 @@
+-- 7 Billion Humans (2053) --
+-- 34: Seek and Destroy 1 --
+
+-- Target Size: 9
+-- Size: 12
+-- Target Speed: 21
+-- Speed: 18
+
+mem1 = set 99
+mem2 = nearest shredder
+step n
+step n
+a:
+b:
+step n
+if c < mem1 and
+ c == datacube:
+	mem1 = set c
+	jump b
+endif
+if n != wall:
+	jump a
+endif
+pickup mem1
+giveto mem2
