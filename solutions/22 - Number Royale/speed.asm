@@ -1,18 +1,18 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2056) --
 -- 22: Number Royale --
 
 -- Target Size: 6
--- Size: 7
+-- Size: 6
 -- Target Speed: 11
 -- Speed: 9
 
-step s
-step s
-pickup n
+pickup s
 a:
-if myitem < w or
- myitem < e:
+if myitem < e or
+ myitem < w:
+	b:
 	step s
+	jump b
 endif
-step e
+step w
 jump a
