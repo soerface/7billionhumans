@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <table class="table table-striped table-hover table-sm">
+            <table class="table table-hover table-sm">
                 <thead>
                 <tr>
                     <th>Year</th>
@@ -25,20 +25,24 @@
                 </thead>
                 <tbody>
                 {% for year in years %}
-                    <tr>
+                    <tr {% if year.coffee_break %} class="table-secondary" {% endif %}>
                         <td>{{ year.year }}</td>
                         <td>{{ year.name }}</td>
-                        <td>{{ year.size }} / {{ year.target_size }}</td>
-                        <td>{{ year.speed }} / {{ year.target_speed }}</td>
-                        {% if year.size_and_speed %}
-                            <td class="text-success">
-                                <i class="fas fa-check"
-                                   title="A solution with size and speed challenge is available"></i>
-                            </td>
+                        {% if year.coffee_break %}
+                            <td colspan="3"><i class="fas fa-coffee"></i></td>
                         {% else %}
-                            <td class="text-danger">
-                                <i class="fas fa-times"
-                                   title="No solution known which meets size and speed challenge"></i></td>
+                            <td>{{ year.size }} / {{ year.target_size }}</td>
+                            <td>{{ year.speed }} / {{ year.target_speed }}</td>
+                            {% if year.size_and_speed %}
+                                <td class="text-success">
+                                    <i class="fas fa-check"
+                                       title="A solution with size and speed challenge is available"></i>
+                                </td>
+                            {% else %}
+                                <td class="text-danger">
+                                    <i class="fas fa-times"
+                                       title="No solution known which meets size and speed challenge"></i></td>
+                            {% endif %}
                         {% endif %}
                     </tr>
                 {% endfor %}
