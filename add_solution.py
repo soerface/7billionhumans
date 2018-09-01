@@ -57,14 +57,13 @@ def save(source, path, score=math.inf):
     print(f'Saved:                                      {str(path):>40}')
 
 def add_solution():
-    source = get_sourcecode()
 
     target_size = read_integer('Target Size: ')
     size = read_integer('Size: ')
     target_speed = read_integer('Target Speed: ')
     speed = read_integer('Speed: ')
 
-    source = get_sourcecode()
+    source = None
     while not source:
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()

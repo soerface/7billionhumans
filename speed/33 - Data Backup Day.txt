@@ -4,10 +4,10 @@
 -- Target Size: 8
 -- Size: 9
 -- Target Speed: 3
--- Speed: 3
+-- Speed: 2
 
-mem1 = set e
-if w > mem1:
+if w > e:
+	mem1 = set e
 	step w
 else:
 	mem1 = set w
@@ -16,3 +16,5 @@ endif
 pickup c
 write mem1
 drop
+
+

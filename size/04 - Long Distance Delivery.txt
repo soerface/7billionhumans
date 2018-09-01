@@ -2,12 +2,12 @@
 -- 4: Long Distance Delivery --
 
 -- Target Size: 4
--- Size: 4
+-- Size: 3
 -- Target Speed: 7
--- Speed: 6
+-- Speed: 29
 
-step e
-pickup c
 a:
 step e
+pickup c
 jump a
+
