@@ -1,5 +1,4 @@
-|    |      |          Size            |||           Speed          |||
-| ID | Name | Challenge | global | local | Challenge | global | local |
+| ID | Name | Size</br>Challenge | Size</br>global | Size</br>local | Speed</br>Challenge | Speed</br>global | Speed</br>local |
 |:--- |:--- |:---------:|:------:|:-----:|:---------:|:------:|:-----:|
 | 1 | VIDEO SEQUENCE | | | | | | |
 | 2 | WelcomeNewEmployees | 3|3|3  | 2|1|1  |

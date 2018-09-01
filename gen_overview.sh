@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "|    |      |          Size            |||           Speed          |||
-| ID | Name | Challenge | global | local | Challenge | global | local |
+echo "| ID | Name | Size</br>Challenge | Size</br>global | Size</br>local | Speed</br>Challenge | Speed</br>global | Speed</br>local |
 |:--- |:--- |:---------:|:------:|:-----:|:---------:|:------:|:-----:|" > overview.md
 if [ ! -f onlinestats.txt ]; then
 	curl -s https://tomorrowcorporation.com/7billionhumansStats/ | grep "\(commands\|seconds\|class=.row.\)" | sed 's|^\t*||;s|<div id=.||;s|. class=.row.*||;s| .*||' > onlinestats.txt
