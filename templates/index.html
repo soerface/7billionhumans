@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <p>
+                I'm collection my solutions for the game <a href="https://tomorrowcorporation.com/7billionhumans">7
+                Billion Humans</a>, created by <a href="https://tomorrowcorporation.com/">Tomorrow Corporation</a>.
+                If you have a better solution, go ahead and <a href="https://github.com/soerface/7billionhumans">submit
+                a pull request!</a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped table-hover table-sm">
+                <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Speed</th>
+                    <th>Size + Speed?</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for year in years %}
+                    <tr>
+                        <td>{{ year.year }}</td>
+                        <td>{{ year.name }}</td>
+                        <td>{{ year.size }} / {{ year.target_size }}</td>
+                        <td>{{ year.speed }} / {{ year.target_speed }}</td>
+                        {% if year.size_and_speed %}
+                            <td class="text-success">
+                                <i class="fas fa-check"
+                                   title="A solution with size and speed challenge is available"></i>
+                            </td>
+                        {% else %}
+                            <td class="text-danger">
+                                <i class="fas fa-times"
+                                   title="No solution known which meets size and speed challenge"></i></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
