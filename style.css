@@ -1,0 +1,27 @@
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+/* TODO: tranpile from SASS for easy variable replacement? */
+
+/*.container, .bg-light, .navbar-light {*/
+    /*background-color: #e8dbce;*/
+/*}*/
+
+/*body {*/
+    /*background-color: #615648;*/
+/*}*/
+
+/*h1, h2 {*/
+    /*color: #464646;*/
+/*}*/
+
+/*a {*/
+    /*color: #565656;*/
+/*}*/
+
+/*a:visited {*/
+    /*color: #b85b5a;*/
+/*}*/
