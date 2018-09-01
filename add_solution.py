@@ -48,9 +48,8 @@ def get_score(path, category):
     return math.inf
 
 
-def save(source, path, score=math.inf):
+def save(source, category, path, score=math.inf):
     if path.exists():
-        category = path.parents[0].name
         if score == math.inf:
             print(f'Already exists, not overwriting:            {str(path):>40}')
             return
@@ -79,13 +78,13 @@ def add_solution():
     level_id, level_name = get_details(source)
 
     print()
-    filename = f'{level_id:02} - {level_name}.txt'
+    dirname = f'{level_id:02} - {level_name}'
     if size <= target_size:
-        save(source, BASE_PATH / 'size' / filename, size)
+        save(source, 'size', BASE_PATH / dirname / 'size.asm', size)
     if speed <= target_speed:
-        save(source, BASE_PATH / 'speed' / filename, speed)
+        save(source, 'speed', BASE_PATH / dirname / 'speed.asm', speed)
     if size <= target_size and speed <= target_speed:
-        save(source, BASE_PATH / 'speed+size' / filename)
+        save(source, 'speed+size', BASE_PATH / dirname / 'speed+size.asm')
     print()
 
     return input('Add another source? [y/N] ').lower() == 'y'
