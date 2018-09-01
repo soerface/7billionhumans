@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h2>Solutions for 7 Billion Humans</h2>
     <div class="row">
         <div class="col-12">
             <p>
@@ -25,12 +26,17 @@
                 </thead>
                 <tbody>
                 {% for year in years %}
-                    <tr {% if year.coffee_break %} class="table-secondary" {% endif %}>
-                        <td>{{ year.year }}</td>
-                        <td>{{ year.name }}</td>
-                        {% if year.coffee_break %}
-                            <td colspan="3"><i class="fas fa-coffee"></i></td>
-                        {% else %}
+                    {% if year.coffee_break %}
+                        <tr class="table-secondary">
+                            <td>{{ year.year }} <i class="fas fa-coffee"></i></td>
+                            <td colspan="4">{{ year.name }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td>{{ year.year }}</td>
+                            <td>
+                                <a href="{{ year.slug }}">{{ year.name }}</a>
+                            </td>
                             <td>{{ year.size }} / {{ year.target_size }}</td>
                             <td>{{ year.speed }} / {{ year.target_speed }}</td>
                             {% if year.size_and_speed %}
@@ -43,8 +49,8 @@
                                     <i class="fas fa-times"
                                        title="No solution known which meets size and speed challenge"></i></td>
                             {% endif %}
-                        {% endif %}
-                    </tr>
+                        </tr>
+                    {% endif %}
                 {% endfor %}
                 </tbody>
             </table>

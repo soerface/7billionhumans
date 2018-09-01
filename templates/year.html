@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% macro render_source(solution) %}
+    <div class="card">
+        <div class="col-xs-6">
+            <pre>{{ solution.source | safe }}</pre>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro render_size_challenge(solution) %}
+    <div class="card">
+        <h4>Size Challenge</h4>
+        <p>Use <strong>{{ target_size }}</strong> or fewer commands.</p>
+        <p class="{{ 'text-success' if solution.size <= solution.target_size else 'text-danger' }}">
+            <strong>Your current solution uses {{ solution.size }} commands.</strong>
+        </p>
+        <p>Shortest known solution with >50% success at time of release: <strong>{{ shortest }}</strong> cmds</p>
+    </div>
+{% endmacro %}
+
+{% macro render_speed_challenge(solution) %}
+    <div class="card">
+        <h4>Speed Challenge</h4>
+        <p>Complete in <strong>{{ target_speed }}</strong> or fewer seconds, averaged over 25 random tests.</p>
+        <p class="{{ 'text-success' if solution.speed <= solution.target_speed else 'text-danger' }}">
+            <strong>Your solution completes in {{ solution.speed }} seconds, on average.</strong>
+        </p>
+        <p>Fastest known solution with >50% success at time of release: <strong>{{ shortest }}</strong> secs</p>
+    </div>
+{% endmacro %}
+
+{% block content %}
+    <h2>{{ year.year }} - {{ year.name }}</h2>
+    {% if size_solution %}
+        <card class="container">
+            <div class="row">
+                <div class="col-4">
+                    {{ render_source(size_solution) }}
+                </div>
+                <div class="col-8">
+                    {{ render_size_challenge(size_solution) }}
+                    <hr />
+                    {{ render_speed_challenge(size_solution) }}
+                </div>
+            </div>
+        </card>
+    {% endif %}
+    {% if speed_solution %}
+        <card class="container">
+            <div class="row">
+                <div class="col-4">
+                    {{ render_source(speed_solution) }}
+                </div>
+                <div class="col-8">
+                    {{ render_size_challenge(speed_solution) }}
+                    <hr />
+                    {{ render_speed_challenge(speed_solution) }}
+                </div>
+            </div>
+        </card>
+    {% endif %}
+    {% if speed_and_size_solution %}
+        <card class="container">
+            <div class="row">
+                <div class="col-4">
+                    {{ render_source(speed_and_size_solution) }}
+                </div>
+                <div class="col-8">
+                    {{ render_size_challenge(speed_and_size_solution) }}
+                    <hr />
+                    {{ render_speed_challenge(speed_and_size_solution) }}
+                </div>
+            </div>
+        </card>
+    {% endif %}
+{% endblock %}
