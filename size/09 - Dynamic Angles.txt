@@ -4,12 +4,14 @@
 -- Target Size: 5
 -- Size: 5
 -- Target Speed: 6
--- Speed: 13
+-- Speed: 5
 
+pickup s
 a:
 step s
-pickup c
 if nw == datacube:
 	drop
 endif
 jump a
+
+

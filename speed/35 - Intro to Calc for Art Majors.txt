@@ -4,9 +4,10 @@
 -- Target Size: 4
 -- Size: 4
 -- Target Speed: 4
--- Speed: 4
+-- Speed: 3
 
-mem1 = calc s + 1
 pickup s
+mem1 = calc myitem + 1
 write mem1
 drop
+
