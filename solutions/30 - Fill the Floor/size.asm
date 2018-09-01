@@ -1,8 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 30: Fill the Floor --
 
--- Target Size: 7
--- Size: 7
+-- Target Size: 6
+-- Size: 6
 -- Target Speed: 170
 -- Speed: 737
 
