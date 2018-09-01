@@ -57,6 +57,8 @@ def save(source, category, path, score=math.inf):
         if score > old_score:
             print(f'Already exists, current solution is better: {str(path):>40}')
             return
+    if not path.parent.exists():
+        path.parent.mkdir()
     with path.open('w') as f:
         f.write('\n'.join(source))
     print(f'Saved:                                      {str(path):>40}')
