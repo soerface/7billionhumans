@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.6"
+install: pip install -r requirements.txt
+script: ./build_html.py
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: _build

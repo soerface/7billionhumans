@@ -5,12 +5,14 @@ import subprocess
 import re
 import math
 
-BASE_PATH = Path('.')
+BASE_PATH = Path('./solutions')
+
 
 def get_sourcecode():
     source = subprocess.run(['xclip', '-out', '-selection', 'clipboard'], stdout=subprocess.PIPE).stdout
     if source.startswith(b'-- 7 Billion Humans'):
         return source.decode().strip().split('\n')
+
 
 def read_integer(msg):
     level_id = None
@@ -21,6 +23,7 @@ def read_integer(msg):
             print('Invalid number')
         return n
 
+
 def add_scores(source, target_size, size, target_speed, speed):
     source.insert(3, '')
     source.insert(3, f'-- Speed: {speed}')
@@ -28,9 +31,11 @@ def add_scores(source, target_size, size, target_speed, speed):
     source.insert(3, f'-- Size: {size}')
     source.insert(3, f'-- Target Size: {target_size}')
 
+
 def get_details(source):
     n, name = re.search('(\d{1,2}): (.+) --', source[1]).groups()
     return int(n), name
+
 
 def get_score(path, category):
     with path.open() as f:
@@ -42,9 +47,9 @@ def get_score(path, category):
                     return int(match.group())
     return math.inf
 
-def save(source, path, score=math.inf):
+
+def save(source, category, path, score=math.inf):
     if path.exists():
-        category = path.parents[0].name
         if score == math.inf:
             print(f'Already exists, not overwriting:            {str(path):>40}')
             return
@@ -56,8 +61,8 @@ def save(source, path, score=math.inf):
         f.write('\n'.join(source))
     print(f'Saved:                                      {str(path):>40}')
 
-def add_solution():
 
+def add_solution():
     target_size = read_integer('Target Size: ')
     size = read_integer('Size: ')
     target_speed = read_integer('Target Speed: ')
@@ -73,16 +78,17 @@ def add_solution():
     level_id, level_name = get_details(source)
 
     print()
-    filename = f'{level_id:02} - {level_name}.txt'
+    dirname = f'{level_id:02} - {level_name}'
     if size <= target_size:
-        save(source, BASE_PATH / 'size' / filename, size)
+        save(source, 'size', BASE_PATH / dirname / 'size.asm', size)
     if speed <= target_speed:
-        save(source, BASE_PATH / 'speed' / filename, speed)
+        save(source, 'speed', BASE_PATH / dirname / 'speed.asm', speed)
     if size <= target_size and speed <= target_speed:
-        save(source, BASE_PATH / 'speed+size' / filename)
+        save(source, 'speed+size', BASE_PATH / dirname / 'speed+size.asm')
     print()
 
     return input('Add another source? [y/N] ').lower() == 'y'
+
 
 if __name__ == '__main__':
     while add_solution():
