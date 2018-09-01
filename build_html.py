@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
 import shutil
