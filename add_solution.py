@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.6
 
 from pathlib import Path
 import subprocess
@@ -8,7 +8,7 @@ import math
 BASE_PATH = Path('.')
 
 def get_sourcecode():
-    source = subprocess.run(['xclip', '-out'], stdout=subprocess.PIPE).stdout
+    source = subprocess.run(['xclip', '-out', '-selection', 'clipboard'], stdout=subprocess.PIPE).stdout
     if source.startswith(b'-- 7 Billion Humans'):
         return source.decode().strip().split('\n')
 
