@@ -1,7 +1,7 @@
 # 7 Billion Humans
-Solutions to the challenges of the game "7 Billion Humans"
+Solutions to the challenges of the game "7 Billion Humans". Table with overview available at [GitHub Pages](https://soerface.github.io/7billionhumans).
 
-Get the game from the [Tomorrow Corporation Website](https://tomorrowcorporation.com/7billionhumans)
+Get the game from the [Tomorrow Corporation Website](https://tomorrowcorporation.com/7billionhumans).
 
 ## Submit solution
 
