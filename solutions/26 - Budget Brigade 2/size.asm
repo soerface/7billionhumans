@@ -1,24 +1,20 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2056) --
 -- 26: Budget Brigade 2 --
 
 -- Target Size: 10
--- Size: 10
+-- Size: 9
 -- Target Speed: 70
--- Speed: 242
+-- Speed: 161
 
 a:
-if myitem >= 50 and
- e == worker:
-	giveto e
-endif
-if myitem < 50 and
- w == worker:
-	giveto w
-endif
-if myitem == datacube or
- s == printer:
+if myitem != datacube and
+ s != shredder:
 	takefrom s
-	giveto n
+endif
+if myitem >= 50:
+	giveto e
+else:
+	giveto w
 endif
 if s == shredder and
  myitem == datacube:

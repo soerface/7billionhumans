@@ -1,18 +1,18 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2056) --
 -- 11: Injection Sites 1 --
 
 -- Target Size: 5
--- Size: 6
+-- Size: 8
 -- Target Speed: 7
--- Speed: 7
+-- Speed: 6
 
 pickup s
+step s
+step s
 a:
 step s
 step s
-if w == datacube and
- c == nothing and
- e == datacube:
-	drop
+if c == datacube:
+	jump a
 endif
-jump a
+drop
