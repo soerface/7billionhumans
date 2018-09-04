@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-
+import json
 from pathlib import Path
 import subprocess
 import re
@@ -25,17 +25,22 @@ def read_integer(msg):
         return n
 
 
-def add_scores(source, target_size, size, target_speed, speed):
+def add_scores(source, size, speed):
     source.insert(3, '')
     source.insert(3, f'-- Speed: {speed}')
-    source.insert(3, f'-- Target Speed: {target_speed}')
     source.insert(3, f'-- Size: {size}')
-    source.insert(3, f'-- Target Size: {target_size}')
 
 
 def get_details(source):
     n, name = re.search('(\d{1,2}): (.+) --', source[1]).groups()
     return int(n), name
+
+
+def get_target_scores(year):
+    with open('challenges.json') as f:
+        challenges = json.load(f)
+    scores = challenges[str(year)]
+    return scores['size_challenge'], scores['speed_challenge']
 
 
 def get_score(path, category):
@@ -64,9 +69,7 @@ def save(source, categories, path, scores: Tuple=(math.inf,)):
 
 
 def add_solution():
-    target_size = read_integer('Target Size: ')
     size = read_integer('Size: ')
-    target_speed = read_integer('Target Speed: ')
     speed = read_integer('Speed: ')
 
     source = None
@@ -74,9 +77,10 @@ def add_solution():
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()
 
-    add_scores(source, target_size, size, target_speed, speed)
+    add_scores(source, size, speed)
 
     level_id, level_name = get_details(source)
+    target_size, target_speed = get_target_scores(level_id)
 
     print()
     dirname = f'{level_id:02} - {level_name}'

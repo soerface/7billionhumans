@@ -5,7 +5,7 @@ from typing import Dict, List
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
-from add_solution import get_score
+from add_solution import get_score, get_target_scores
 import shutil
 import pygments
 from pygments.lexers import guess_lexer
@@ -68,9 +68,9 @@ def get_years() -> List[Dict]:
 
 
 def get_year_details(path: Path) -> Dict:
-    solutions = [get_solution_details(x) for x in path.glob('*.asm')]
     year = path.name[:2]
     name = path.name[5:]
+    solutions = [get_solution_details(x) for x in path.glob('*.asm')]
     if not solutions:
         return {
             'year': year,
@@ -97,11 +97,13 @@ def get_year_details(path: Path) -> Dict:
 def get_solution_details(path: Path) -> Dict:
     with path.open() as f:
         source = f.read()
+    year = int(re.search('\d+', source.split('\n')[1]).group(0))
+    target_size, target_speed = get_target_scores(year)
     return {
         'source': pygments.highlight(source, guess_lexer(source), HtmlFormatter()),
-        'target_size': get_target_score(path, 'size'),
+        'target_size': target_size,
         'size': get_score(path, 'size'),
-        'target_speed': get_target_score(path, 'speed'),
+        'target_speed': target_speed,
         'speed': get_score(path, 'speed'),
     }
 
@@ -116,17 +118,6 @@ def meets_size_and_speed(solution: Dict):
     speed = solution['speed']
     target_speed = solution['target_speed']
     return size <= target_size and speed <= target_speed
-
-
-def get_target_score(path, category):
-    with path.open() as f:
-        for line in f.readlines():
-            s = line.lower()
-            if category in s and 'target' in s:
-                match = re.search(r'\d+', s)
-                if match:
-                    return int(match.group())
-    return math.inf
 
 
 if __name__ == '__main__':

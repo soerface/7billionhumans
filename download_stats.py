@@ -36,7 +36,7 @@ def main():
     res = request.urlopen('https://tomorrowcorporation.com/7billionhumansStats/')
     soup = BeautifulSoup(res.read(), 'lxml')
     rows = soup.find(class_='statEntries').find_all(class_='row')
-    challenges = [get_challenge(row) for row in rows]
+    challenges = {get_challenge(row)['year']: get_challenge(row) for row in rows}
     with open('challenges.json', 'w') as f:
         json.dump(challenges, f, indent=2)
 
