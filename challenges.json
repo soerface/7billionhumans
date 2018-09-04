@@ -1,0 +1,514 @@
+[
+  {
+    "year": 2,
+    "name": "Welcome, New Employees",
+    "size_challenge": 3,
+    "shortest_known": 3,
+    "speed_challenge": 2,
+    "fastest_known": 1
+  },
+  {
+    "year": 3,
+    "name": "Transport Squad",
+    "size_challenge": 5,
+    "shortest_known": 5,
+    "speed_challenge": 2,
+    "fastest_known": 2
+  },
+  {
+    "year": 4,
+    "name": "Long Distance Delivery",
+    "size_challenge": 4,
+    "shortest_known": 3,
+    "speed_challenge": 7,
+    "fastest_known": 6
+  },
+  {
+    "year": 5,
+    "name": "An Important Decision",
+    "size_challenge": 5,
+    "shortest_known": 5,
+    "speed_challenge": 3,
+    "fastest_known": 2
+  },
+  {
+    "year": 6,
+    "name": "Little Exterminator 1",
+    "size_challenge": 9,
+    "shortest_known": 8,
+    "speed_challenge": 4,
+    "fastest_known": 3
+  },
+  {
+    "year": 7,
+    "name": "Collation Station",
+    "size_challenge": 5,
+    "shortest_known": 4,
+    "speed_challenge": 6,
+    "fastest_known": 4
+  },
+  {
+    "year": 9,
+    "name": "Dynamic Angles",
+    "size_challenge": 5,
+    "shortest_known": 5,
+    "speed_challenge": 6,
+    "fastest_known": 3
+  },
+  {
+    "year": 10,
+    "name": "Emergency Escapades",
+    "size_challenge": 9,
+    "shortest_known": 7,
+    "speed_challenge": 25,
+    "fastest_known": 13
+  },
+  {
+    "year": 11,
+    "name": "Injection Sites 1",
+    "size_challenge": 5,
+    "shortest_known": 5,
+    "speed_challenge": 7,
+    "fastest_known": 5
+  },
+  {
+    "year": 12,
+    "name": "Unzip",
+    "size_challenge": 8,
+    "shortest_known": 8,
+    "speed_challenge": 7,
+    "fastest_known": 4
+  },
+  {
+    "year": 13,
+    "name": "Injection Sites 2",
+    "size_challenge": 10,
+    "shortest_known": 9,
+    "speed_challenge": 55,
+    "fastest_known": 5
+  },
+  {
+    "year": 14,
+    "name": "Intro to Shredding",
+    "size_challenge": 4,
+    "shortest_known": 4,
+    "speed_challenge": 3,
+    "fastest_known": 2
+  },
+  {
+    "year": 15,
+    "name": "Shred Lines",
+    "size_challenge": 9,
+    "shortest_known": 8,
+    "speed_challenge": 23,
+    "fastest_known": 12
+  },
+  {
+    "year": 16,
+    "name": "Little Exterminator 2",
+    "size_challenge": 8,
+    "shortest_known": 6,
+    "speed_challenge": 9,
+    "fastest_known": 7
+  },
+  {
+    "year": 17,
+    "name": "Content Creators",
+    "size_challenge": 1,
+    "shortest_known": 1,
+    "speed_challenge": 3,
+    "fastest_known": 2
+  },
+  {
+    "year": 18,
+    "name": "Uniquely Disposed",
+    "size_challenge": 7,
+    "shortest_known": 5,
+    "speed_challenge": 12,
+    "fastest_known": 7
+  },
+  {
+    "year": 19,
+    "name": "Content Creators Bug Fix",
+    "size_challenge": 4,
+    "shortest_known": 4,
+    "speed_challenge": 27,
+    "fastest_known": 26
+  },
+  {
+    "year": 20,
+    "name": "Reverse Line",
+    "size_challenge": 9,
+    "shortest_known": 9,
+    "speed_challenge": 11,
+    "fastest_known": 4
+  },
+  {
+    "year": 21,
+    "name": "Big Data",
+    "size_challenge": 8,
+    "shortest_known": 6,
+    "speed_challenge": 32,
+    "fastest_known": 21
+  },
+  {
+    "year": 22,
+    "name": "Number Royale",
+    "size_challenge": 6,
+    "shortest_known": 5,
+    "speed_challenge": 11,
+    "fastest_known": 7
+  },
+  {
+    "year": 23,
+    "name": "Sorting Hall",
+    "size_challenge": 6,
+    "shortest_known": 6,
+    "speed_challenge": 26,
+    "fastest_known": 16
+  },
+  {
+    "year": 24,
+    "name": "Budget Brigade 1",
+    "size_challenge": 7,
+    "shortest_known": 6,
+    "speed_challenge": 50,
+    "fastest_known": 47
+  },
+  {
+    "year": 25,
+    "name": "My First Shredding Memory",
+    "size_challenge": 5,
+    "shortest_known": 5,
+    "speed_challenge": 132,
+    "fastest_known": 131
+  },
+  {
+    "year": 26,
+    "name": "Budget Brigade 2",
+    "size_challenge": 10,
+    "shortest_known": 8,
+    "speed_challenge": 70,
+    "fastest_known": 67
+  },
+  {
+    "year": 28,
+    "name": "Neural Pathways",
+    "size_challenge": 4,
+    "shortest_known": 4,
+    "speed_challenge": 51,
+    "fastest_known": 51
+  },
+  {
+    "year": 29,
+    "name": "Biometric Access",
+    "size_challenge": 5,
+    "shortest_known": 5,
+    "speed_challenge": 61,
+    "fastest_known": 58
+  },
+  {
+    "year": 30,
+    "name": "Fill the Floor",
+    "size_challenge": 6,
+    "shortest_known": 5,
+    "speed_challenge": 170,
+    "fastest_known": 119
+  },
+  {
+    "year": 31,
+    "name": "Checkerboard Organization",
+    "size_challenge": 7,
+    "shortest_known": 7,
+    "speed_challenge": 100,
+    "fastest_known": 58
+  },
+  {
+    "year": 32,
+    "name": "Creative Writhing",
+    "size_challenge": 6,
+    "shortest_known": 5,
+    "speed_challenge": 39,
+    "fastest_known": 31
+  },
+  {
+    "year": 33,
+    "name": "Data Backup Day",
+    "size_challenge": 8,
+    "shortest_known": 8,
+    "speed_challenge": 3,
+    "fastest_known": 2
+  },
+  {
+    "year": 34,
+    "name": "Seek and Destroy 1",
+    "size_challenge": 9,
+    "shortest_known": 8,
+    "speed_challenge": 21,
+    "fastest_known": 8
+  },
+  {
+    "year": 35,
+    "name": "Intro to Calc for Art Majors",
+    "size_challenge": 4,
+    "shortest_known": 4,
+    "speed_challenge": 4,
+    "fastest_known": 3
+  },
+  {
+    "year": 36,
+    "name": "Seek and Destroy 2",
+    "size_challenge": 10,
+    "shortest_known": 8,
+    "speed_challenge": 145,
+    "fastest_known": 69
+  },
+  {
+    "year": 37,
+    "name": "Dangerous Spreadsheeting",
+    "size_challenge": 13,
+    "shortest_known": 13,
+    "speed_challenge": 32,
+    "fastest_known": 16
+  },
+  {
+    "year": 38,
+    "name": "Seek and Destroy 3",
+    "size_challenge": 22,
+    "shortest_known": 17,
+    "speed_challenge": 33,
+    "fastest_known": 11
+  },
+  {
+    "year": 39,
+    "name": "Printing Etiquette 1",
+    "size_challenge": 9,
+    "shortest_known": 7,
+    "speed_challenge": 55,
+    "fastest_known": 39
+  },
+  {
+    "year": 40,
+    "name": "Printing Etiquette 2",
+    "size_challenge": 10,
+    "shortest_known": 8,
+    "speed_challenge": 55,
+    "fastest_known": 39
+  },
+  {
+    "year": 41,
+    "name": "Image Decrypter",
+    "size_challenge": 8,
+    "shortest_known": 8,
+    "speed_challenge": 15,
+    "fastest_known": 7
+  },
+  {
+    "year": 42,
+    "name": "Important Email Organization",
+    "size_challenge": 18,
+    "shortest_known": 15,
+    "speed_challenge": 200,
+    "fastest_known": 159
+  },
+  {
+    "year": 43,
+    "name": "Multiplication Table",
+    "size_challenge": 11,
+    "shortest_known": 10,
+    "speed_challenge": 53,
+    "fastest_known": 31
+  },
+  {
+    "year": 44,
+    "name": "Unique Fashion Party",
+    "size_challenge": 11,
+    "shortest_known": 6,
+    "speed_challenge": 75,
+    "fastest_known": 22
+  },
+  {
+    "year": 46,
+    "name": "Compulsory Office Romance",
+    "size_challenge": 7,
+    "shortest_known": 4,
+    "speed_challenge": 15,
+    "fastest_known": 6
+  },
+  {
+    "year": 47,
+    "name": "Automated Pleasantries",
+    "size_challenge": 3,
+    "shortest_known": 3,
+    "speed_challenge": 8,
+    "fastest_known": 7
+  },
+  {
+    "year": 48,
+    "name": "Community Training Day",
+    "size_challenge": 6,
+    "shortest_known": 6,
+    "speed_challenge": 8,
+    "fastest_known": 6
+  },
+  {
+    "year": 49,
+    "name": "Double Sided Destruction",
+    "size_challenge": 7,
+    "shortest_known": 6,
+    "speed_challenge": 17,
+    "fastest_known": 14
+  },
+  {
+    "year": 50,
+    "name": "Cubical Communication",
+    "size_challenge": 12,
+    "shortest_known": 8,
+    "speed_challenge": 60,
+    "fastest_known": 28
+  },
+  {
+    "year": 51,
+    "name": "Identify Yourselves",
+    "size_challenge": 7,
+    "shortest_known": 6,
+    "speed_challenge": 27,
+    "fastest_known": 6
+  },
+  {
+    "year": 52,
+    "name": "The Mode Code",
+    "size_challenge": 24,
+    "shortest_known": 19,
+    "speed_challenge": 158,
+    "fastest_known": 77
+  },
+  {
+    "year": 53,
+    "name": "100 Cubes on the Floor",
+    "size_challenge": 16,
+    "shortest_known": 9,
+    "speed_challenge": 80,
+    "fastest_known": 36
+  },
+  {
+    "year": 54,
+    "name": "Terrain Leveler",
+    "size_challenge": 26,
+    "shortest_known": 11,
+    "speed_challenge": 90,
+    "fastest_known": 59
+  },
+  {
+    "year": 55,
+    "name": "Data Flowers",
+    "size_challenge": 8,
+    "shortest_known": 8,
+    "speed_challenge": 25,
+    "fastest_known": 21
+  },
+  {
+    "year": 56,
+    "name": "Local Maximums",
+    "size_challenge": 8,
+    "shortest_known": 8,
+    "speed_challenge": 14,
+    "fastest_known": 13
+  },
+  {
+    "year": 57,
+    "name": "Neighborly Sweeper",
+    "size_challenge": 16,
+    "shortest_known": 9,
+    "speed_challenge": 100,
+    "fastest_known": 15
+  },
+  {
+    "year": 58,
+    "name": "Good Neighbors",
+    "size_challenge": 10,
+    "shortest_known": 5,
+    "speed_challenge": 175,
+    "fastest_known": 20
+  },
+  {
+    "year": 59,
+    "name": "Glory Hole",
+    "size_challenge": 7,
+    "shortest_known": 6,
+    "speed_challenge": 15,
+    "fastest_known": 8
+  },
+  {
+    "year": 60,
+    "name": "Understaffed Sorting",
+    "size_challenge": 12,
+    "shortest_known": 12,
+    "speed_challenge": 200,
+    "fastest_known": 155
+  },
+  {
+    "year": 61,
+    "name": "Lazy Pathways",
+    "size_challenge": 11,
+    "shortest_known": 7,
+    "speed_challenge": 250,
+    "fastest_known": 73
+  },
+  {
+    "year": 62,
+    "name": "The Sorting Floor",
+    "size_challenge": 48,
+    "shortest_known": 25,
+    "speed_challenge": 174,
+    "fastest_known": 55
+  },
+  {
+    "year": 63,
+    "name": "Defrag Disordered",
+    "size_challenge": 28,
+    "shortest_known": 19,
+    "speed_challenge": 95,
+    "fastest_known": 8
+  },
+  {
+    "year": 64,
+    "name": "Binary Counter",
+    "size_challenge": 17,
+    "shortest_known": 14,
+    "speed_challenge": 54,
+    "fastest_known": 11
+  },
+  {
+    "year": 65,
+    "name": "Defrag Ordered",
+    "size_challenge": 25,
+    "shortest_known": 18,
+    "speed_challenge": 500,
+    "fastest_known": 15
+  },
+  {
+    "year": 66,
+    "name": "Decimal Counter",
+    "size_challenge": 23,
+    "shortest_known": 19,
+    "speed_challenge": 120,
+    "fastest_known": 46
+  },
+  {
+    "year": 67,
+    "name": "Decimal Doubler",
+    "size_challenge": 25,
+    "shortest_known": 21,
+    "speed_challenge": 250,
+    "fastest_known": 50
+  },
+  {
+    "year": 68,
+    "name": "Goodbye, Humans!",
+    "size_challenge": 9,
+    "shortest_known": 7,
+    "speed_challenge": 50,
+    "fastest_known": 23
+  }
+]
