@@ -5,7 +5,7 @@ from antlr.SBHasmParser import SBHasmParser
 
 from lxml import etree
 
-from antlr.SevenBillionHumans import Pickup, Mem, Dir
+from antlr.SevenBillionHumansParser import Pickup, Mem, Dir
 
 
 class SBHRenderListener(SBHasmListener):

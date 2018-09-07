@@ -1,5 +1,5 @@
 import unittest
-from antlr import SevenBillionHumans
+from antlr import SevenBillionHumansParser
 from pathlib import Path
 
 from build_html import get_solution_details
@@ -10,7 +10,7 @@ class TestAntlrParser(unittest.TestCase):
         for path in Path('solutions').glob('**/*.asm'):
             expected = get_solution_details(path)['size']
             print(path)
-            s = SevenBillionHumans.SevenBillionHumans(path)
+            s = SevenBillionHumansParser.SevenBillionHumansParser(path)
             self.assertEqual(s.cmd_size, expected)
 
 

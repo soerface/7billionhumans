@@ -56,15 +56,16 @@ class Dir:
         self.dir = direction
 
 
-class SevenBillionHumans:
+class SevenBillionHumansParser:
 
-    def __init__(self, asm_filename):
-        self.filename = asm_filename
-        self.cmd_size = 0
-        self.parse()
+    def __init__(self, filepath=None, source=None):
+        if source:
+            self.parse(InputStream(source))
+        elif filepath:
+            self.parse(FileStream(filepath))
 
-    def parse(self):
-        lexer = SBHasmLexer(FileStream(self.filename))
+    def parse(self, source_stream):
+        lexer = SBHasmLexer(source_stream)
         stream = CommonTokenStream(lexer)
         parser = SBHasmParser(stream)
         # parser._listeners = [ MyErrorListener() ]
@@ -76,5 +77,5 @@ class SevenBillionHumans:
 
 
 if __name__ == '__main__':
-    s = SevenBillionHumans("../solutions/test/size.asm")
+    s = SevenBillionHumansParser("../solutions/test/size.asm")
     print(s.html)

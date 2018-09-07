@@ -5,6 +5,8 @@ import subprocess
 import re
 import math
 
+from antlr.SevenBillionHumansParser import SevenBillionHumansParser
+
 BASE_PATH = Path('./solutions')
 
 
@@ -65,7 +67,6 @@ def save(source, path):
 
 
 def add_solution():
-    size = read_integer('Size: ')
     speed = read_integer('Speed: ')
 
     source = None
@@ -73,6 +74,7 @@ def add_solution():
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()
 
+    size = SevenBillionHumansParser(source='\n'.join(source)).cmd_size
     add_scores(source, size, speed)
 
     level_id, level_name = get_details(source)
