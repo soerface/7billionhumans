@@ -65,13 +65,15 @@ def save(source, path):
 
 
 def add_solution():
-    size = read_integer('Size: ')
     speed = read_integer('Speed: ')
 
     source = None
     while not source:
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()
+
+    p = subprocess.Popen(['./loc.sh'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+    size = int(p.communicate(input='\n'.join(source).encode())[0])
 
     add_scores(source, size, speed)
 
