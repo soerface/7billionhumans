@@ -26,25 +26,24 @@
                     
     <div class="card">
         <div class="col-xs-6">
-            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2053) --
+            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2056) --
 -- 24: Budget Brigade 1 --
 
 -- Target Size: 7
--- Size: 7
+-- Size: 6
 -- Target Speed: 50
--- Speed: 133
+-- Speed: 106
 
-if s == shredder:
-	a:
-	if myitem == datacube:
-		giveto s
-	endif
-	jump a
+a:
+if s == printer:
+	takefrom s
 endif
-b:
-takefrom s
-giveto e
-jump b
+if s == shredder and
+ myitem == datacube:
+	giveto s
+endif
+takefrom w
+jump a
 </pre></div>
 </pre>
         </div>
@@ -57,7 +56,7 @@ jump b
         <h4>Size Challenge</h4>
         <p>Use <strong>7</strong> or fewer commands.</p>
         <p class="text-success">
-            <strong>Your current solution uses 7 commands.</strong>
+            <strong>Your current solution uses 6 commands.</strong>
         </p>
         <p>Shortest known solution with >50% success at time of release: <strong></strong> cmds</p>
     </div>
@@ -68,7 +67,7 @@ jump b
         <h4>Speed Challenge</h4>
         <p>Complete in <strong>50</strong> or fewer seconds, averaged over 25 random tests.</p>
         <p class="text-danger">
-            <strong>Your solution completes in 133 seconds, on average.</strong>
+            <strong>Your solution completes in 106 seconds, on average.</strong>
         </p>
         <p>Fastest known solution with >50% success at time of release: <strong></strong> secs</p>
     </div>

@@ -26,32 +26,26 @@
                     
     <div class="card">
         <div class="col-xs-6">
-            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2053) --
+            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2056) --
 -- 13: Injection Sites 2 --
 
 -- Target Size: 10
--- Size: 10
+-- Size: 9
 -- Target Speed: 55
--- Speed: 232
+-- Speed: 201
 
 pickup s
 a:
-if c != datacube and
- w != datacube and
- e != datacube:
-	step w
-endif
-if w == wall or
- e == wall:
+if e == wall or
+ w == wall:
 	step s
 endif
-if w == datacube and
- c != datacube:
+if w == datacube or
+ c == datacube:
 	drop
-endif
-if c == datacube or
- w == datacube:
 	step e
+else:
+	step w
 endif
 jump a
 </pre></div>
@@ -66,7 +60,7 @@ jump a
         <h4>Size Challenge</h4>
         <p>Use <strong>10</strong> or fewer commands.</p>
         <p class="text-success">
-            <strong>Your current solution uses 10 commands.</strong>
+            <strong>Your current solution uses 9 commands.</strong>
         </p>
         <p>Shortest known solution with >50% success at time of release: <strong></strong> cmds</p>
     </div>
@@ -77,7 +71,7 @@ jump a
         <h4>Speed Challenge</h4>
         <p>Complete in <strong>55</strong> or fewer seconds, averaged over 25 random tests.</p>
         <p class="text-danger">
-            <strong>Your solution completes in 232 seconds, on average.</strong>
+            <strong>Your solution completes in 201 seconds, on average.</strong>
         </p>
         <p>Fastest known solution with >50% success at time of release: <strong></strong> secs</p>
     </div>

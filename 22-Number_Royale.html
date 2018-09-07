@@ -21,62 +21,6 @@
     <h2>22 - Number Royale</h2>
     
     
-        <card class="container">
-            <div class="row">
-                <div class="col-4">
-                    
-    <div class="card">
-        <div class="col-xs-6">
-            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2053) --
--- 22: Number Royale --
-
--- Target Size: 6
--- Size: 7
--- Target Speed: 11
--- Speed: 9
-
-step s
-step s
-pickup n
-a:
-if myitem &lt; w or
- myitem &lt; e:
-	step s
-endif
-step e
-jump a
-</pre></div>
-</pre>
-        </div>
-    </div>
-
-                </div>
-                <div class="col-8">
-                    
-    <div class="card">
-        <h4>Size Challenge</h4>
-        <p>Use <strong>6</strong> or fewer commands.</p>
-        <p class="text-danger">
-            <strong>Your current solution uses 7 commands.</strong>
-        </p>
-        <p>Shortest known solution with >50% success at time of release: <strong></strong> cmds</p>
-    </div>
-
-                    <hr />
-                    
-    <div class="card">
-        <h4>Speed Challenge</h4>
-        <p>Complete in <strong>11</strong> or fewer seconds, averaged over 25 random tests.</p>
-        <p class="text-success">
-            <strong>Your solution completes in 9 seconds, on average.</strong>
-        </p>
-        <p>Fastest known solution with >50% success at time of release: <strong></strong> secs</p>
-    </div>
-
-                </div>
-            </div>
-        </card>
-    
     
         <card class="container">
             <div class="row">
@@ -84,23 +28,23 @@ jump a
                     
     <div class="card">
         <div class="col-xs-6">
-            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2053) --
+            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2056) --
 -- 22: Number Royale --
 
 -- Target Size: 6
 -- Size: 6
 -- Target Speed: 11
--- Speed: 10
+-- Speed: 9
 
 pickup s
 a:
-if myitem &lt; w or
- myitem &lt; e or
- s != hole:
+if myitem &lt; e or
+ myitem &lt; w:
+	b:
 	step s
-else:
-	step e
+	jump b
 endif
+step w
 jump a
 </pre></div>
 </pre>
@@ -125,7 +69,7 @@ jump a
         <h4>Speed Challenge</h4>
         <p>Complete in <strong>11</strong> or fewer seconds, averaged over 25 random tests.</p>
         <p class="text-success">
-            <strong>Your solution completes in 10 seconds, on average.</strong>
+            <strong>Your solution completes in 9 seconds, on average.</strong>
         </p>
         <p>Fastest known solution with >50% success at time of release: <strong></strong> secs</p>
     </div>
