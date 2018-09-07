@@ -74,7 +74,7 @@ def add_solution():
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()
 
-    size = SevenBillionHumansParser(source='\n'.join(source)).cmd_size
+    size = SevenBillionHumansParser(source='\n'.join(source) + '\n').cmd_size
     add_scores(source, size, speed)
 
     level_id, level_name = get_details(source)
