@@ -78,11 +78,14 @@ def add_solution():
     add_scores(source, size, speed)
 
     level_id, level_name = get_details(source)
-    target_size, target_speed = get_target_scores(level_id)
-
     print()
     dirname = f'{level_id:02} - {level_name}'
-    if size <= target_size or speed <= target_speed:
+
+    other_scores = [(get_score(path, 'size'), get_score(path, 'speed')) for path in (BASE_PATH / dirname).glob('*.asm')]
+
+    if any((other_size <= size and other_speed <= speed for other_size, other_speed in other_scores)):
+        print('Your solution is dominated by another solution')
+    else:
         save(source, BASE_PATH / dirname / f'size-{size}_speed-{speed}.asm')
     print()
 
