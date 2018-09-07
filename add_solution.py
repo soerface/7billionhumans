@@ -4,7 +4,6 @@ from pathlib import Path
 import subprocess
 import re
 import math
-from typing import Tuple
 
 BASE_PATH = Path('./solutions')
 
@@ -54,13 +53,10 @@ def get_score(path, category):
     return math.inf
 
 
-def save(source, categories, path, scores: Tuple=(math.inf,)):
+def save(source, path):
     if path.exists():
-        for category, score in zip(categories, scores):
-            old_score = get_score(path, category)
-            if score > old_score:
-                print(f'Already exists, current solution is better: {str(path):>40}')
-                return
+        print('Already exists, not overwriting')
+        return
     if not path.parent.exists():
         path.parent.mkdir()
     with path.open('w') as f:
@@ -84,12 +80,8 @@ def add_solution():
 
     print()
     dirname = f'{level_id:02} - {level_name}'
-    if size <= target_size:
-        save(source, ['size'], BASE_PATH / dirname / 'size.asm', (size,))
-    if speed <= target_speed:
-        save(source, ['speed'], BASE_PATH / dirname / 'speed.asm', (speed,))
-    if size <= target_size and speed <= target_speed:
-        save(source, ['speed', 'size'], BASE_PATH / dirname / 'speed+size.asm', (speed, size))
+    if size <= target_size or speed <= target_speed:
+        save(source, BASE_PATH / dirname / f'size-{size}_speed-{speed}.asm')
     print()
 
     return input('Add another source? [y/N] ').lower() == 'y'
