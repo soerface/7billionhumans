@@ -1,23 +1,38 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2056) --
 -- 10: Emergency Escapades --
 
 -- Target Size: 9
--- Size: 9
+-- Size: 23
 -- Target Speed: 25
--- Speed: 204
+-- Speed: 21
 
 a:
-if c == 1:
-	step n
+if w != hole:
+	step w
+	jump a
 endif
-if c == 2:
-	step e
-endif
-if c == 3:
-	step s
-endif
-if c == 4 or
- c != datacube:
+if ne != hole or
+ se != hole:
+	if ne != hole:
+		if nw == hole:
+			step n
+		endif
+		step nw
+	else:
+		step sw
+	endif
 	step w
 endif
-jump a
+step s
+step s
+step sw
+step w
+step w
+step w
+step nw
+step n
+step n
+step nw
+b:
+step n
+jump b

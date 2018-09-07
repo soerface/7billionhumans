@@ -1,22 +1,16 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2056) --
 -- 21: Big Data --
 
 -- Target Size: 8
--- Size: 8
+-- Size: 6
 -- Target Speed: 32
--- Speed: 20
+-- Speed: 33
 
-step sw
+step s
 a:
-if s != shredder:
-	step s
-	jump a
-endif
-b:
-takefrom se
+takefrom s
 if myitem < 50:
 	giveto sw
-	jump b
+	step e
 endif
-
-
+jump a
