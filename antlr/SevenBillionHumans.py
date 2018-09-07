@@ -1,23 +1,18 @@
-import sys
-
 from antlr4 import *
-from SBHasmLexer import SBHasmLexer
-from SBHasmListener import SBHasmListener
-from SBHasmParser import SBHasmParser
-
-
-from lxml import etree
+from antlr.SBHasmLexer import SBHasmLexer
+from antlr.SBHasmListener import SBHasmListener
+from antlr.SBHasmParser import SBHasmParser
 
 from antlr4.error.ErrorListener import ErrorListener
 
 
-class MyErrorListener( ErrorListener ):
+class MyErrorListener(ErrorListener):
 
     def __init__(self):
         super(MyErrorListener, self).__init__()
 
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
-        raise Exception("SyntaxError in {},{} msg={}".format(line,column, msg))
+        raise Exception("SyntaxError in {},{} msg={}".format(line, column, msg))
 
     def reportAmbiguity(self, recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs):
         raise Exception("reportAmbiguity")
@@ -40,29 +35,28 @@ class SBHCodeSizeListener(SBHasmListener):
         self.cmd_cnt += 1
 
 
-class Pickup():
+class Pickup:
     def __init__(self, item):
         self.item = item
 
     def __str__(self):
         return "Pickup"
 
-class Mem():
+
+class Mem:
     def __init__(self, slot):
         self.slot = slot
 
     def __str__(self):
         return self.slot
 
-class Dir():
+
+class Dir:
     def __init__(self, direction):
         self.dir = direction
 
 
-
-
-
-class SevenBillionHumans():
+class SevenBillionHumans:
 
     def __init__(self, asm_filename):
         self.filename = asm_filename
@@ -73,7 +67,7 @@ class SevenBillionHumans():
         lexer = SBHasmLexer(FileStream(self.filename))
         stream = CommonTokenStream(lexer)
         parser = SBHasmParser(stream)
-        #parser._listeners = [ MyErrorListener() ]
+        # parser._listeners = [ MyErrorListener() ]
         tree = parser.asm()
         printer = SBHCodeSizeListener()
         walker = ParseTreeWalker()
@@ -81,10 +75,6 @@ class SevenBillionHumans():
         self.cmd_size = printer.cmd_cnt
 
 
-
-
-
 if __name__ == '__main__':
     s = SevenBillionHumans("../solutions/test/size.asm")
     print(s.html)
-

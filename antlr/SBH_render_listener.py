@@ -1,5 +1,11 @@
-from SBHasmListener import SBHasmListener
-from SBHasmParser import SBHasmParser
+import sys
+
+from antlr.SBHasmListener import SBHasmListener
+from antlr.SBHasmParser import SBHasmParser
+
+from lxml import etree
+
+from antlr.SevenBillionHumans import Pickup, Mem, Dir
 
 
 class SBHRenderListener(SBHasmListener):
@@ -15,10 +21,6 @@ class SBHRenderListener(SBHasmListener):
         self.level = 1
         self.dict = []
         self.current_dict = None
-
-
-
-
 
     def enterStep(self, ctx):
         step = etree.Element('step')
@@ -45,8 +47,6 @@ class SBHRenderListener(SBHasmListener):
         step = etree.Element('set')
         self.current_item = step
         self.current.append(step)
-
-
 
     def exitCmd(self, ctx):
         pass
@@ -75,8 +75,6 @@ class SBHRenderListener(SBHasmListener):
     def enterCmd(self, ctx):
         self.cmd_cnt += 1
 
-
-
     def enterSonst(self, ctx):
         condtag = etree.Element('else')
         self.current.append(condtag)
@@ -104,17 +102,14 @@ class SBHRenderListener(SBHasmListener):
         else:
             self.current_item.append(t)
 
-
-
-
     def enterEveryRule(self, ctx):
-        #print("{}<{}>\n".format("  "*self.level, ctx.parser.ruleNames[ctx.getRuleIndex()]))
+        # print("{}<{}>\n".format("  "*self.level, ctx.parser.ruleNames[ctx.getRuleIndex()]))
         self.level += 1
 
     def exitEveryRule(self, ctx):
         self.level -= 1
-        #print("{}</{}>\n".format("  " * self.level, ctx.parser.ruleNames[ctx.getRuleIndex()]))
+        # print("{}</{}>\n".format("  " * self.level, ctx.parser.ruleNames[ctx.getRuleIndex()]))
 
     def visitTerminal(self, node):
-        #print(str(node.symbol))
+        # print(str(node.symbol))
         pass
