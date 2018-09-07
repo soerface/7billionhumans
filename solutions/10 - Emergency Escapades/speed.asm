@@ -2,22 +2,66 @@
 -- 10: Emergency Escapades --
 
 -- Target Size: 9
--- Size: 9
+-- Size: 40
 -- Target Speed: 25
--- Speed: 204
+-- Speed: 19
 
 a:
+step w
+step w
+b:
+step w
 if c == 1:
-	step n
+	if s == wall:
+		step n
+		step nw
+		jump c
+	endif
+	if sw != hole:
+		step sw
+		jump d
+	endif
+	if nw != hole:
+		step nw
+		jump e
+	endif
+	if w != hole:
+		step w
+		jump f
+	endif
 endif
-if c == 2:
-	step e
-endif
+jump b
 if c == 3:
+	f:
+	c:
+	e:
+	d:
+	step sw
 	step s
-endif
-if c == 4 or
- c != datacube:
+	step sw
+	g:
 	step w
+	step w
+	step w
+	step nw
+	step n
+	step n
+	step n
+	step n
+	step nw
+	jump g
+endif
+if w == hole and
+ sw != hole:
+	step sw
+endif
+if w == hole and
+ nw != hole:
+	step nw
+endif
+if w == hole and
+ s == wall:
+	step n
+	step nw
 endif
 jump a
