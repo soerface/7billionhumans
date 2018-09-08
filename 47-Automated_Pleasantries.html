@@ -20,6 +20,8 @@
     
     <h2>47 - Automated Pleasantries</h2>
     
+    
+    
         <card class="container">
             <div class="row">
                 <div class="col-4">
@@ -29,15 +31,13 @@
             <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2053) --
 -- 47: Automated Pleasantries --
 
--- Size: 4
+-- Size: 3
 -- Speed: 7
 
-if w == nothing:
-	a:
-	tell e morning
+if w != nothing:
+	listenfor morning
 endif
-listenfor morning
-jump a
+tell e morning
 </pre></div>
 </pre>
         </div>
@@ -49,8 +49,8 @@ jump a
     <div class="card">
         <h4>Size Challenge</h4>
         <p>Use <strong>3</strong> or fewer commands.</p>
-        <p class="text-danger">
-            <strong>Your current solution uses 4 commands.</strong>
+        <p class="text-success">
+            <strong>Your current solution uses 3 commands.</strong>
         </p>
         <p>Shortest known solution with >50% success at time of release: <strong>3</strong> cmds</p>
     </div>
@@ -69,58 +69,6 @@ jump a
                 </div>
             </div>
         </card>
-    
-    
-        <card class="container">
-            <div class="row">
-                <div class="col-4">
-                    
-    <div class="card">
-        <div class="col-xs-6">
-            <pre><div class="highlight"><pre><span></span>-- 7 Billion Humans (2053) --
--- 47: Automated Pleasantries --
-
--- Size: 4
--- Speed: 7
-
-if w == nothing:
-	a:
-	tell e morning
-endif
-listenfor morning
-jump a
-</pre></div>
-</pre>
-        </div>
-    </div>
-
-                </div>
-                <div class="col-8">
-                    
-    <div class="card">
-        <h4>Size Challenge</h4>
-        <p>Use <strong>3</strong> or fewer commands.</p>
-        <p class="text-danger">
-            <strong>Your current solution uses 4 commands.</strong>
-        </p>
-        <p>Shortest known solution with >50% success at time of release: <strong>3</strong> cmds</p>
-    </div>
-
-                    <hr />
-                    
-    <div class="card">
-        <h4>Speed Challenge</h4>
-        <p>Complete in <strong>8</strong> or fewer seconds, averaged over 25 random tests.</p>
-        <p class="text-success">
-            <strong>Your solution completes in 7 seconds, on average.</strong>
-        </p>
-        <p>Fastest known solution with >50% success at time of release: <strong>7</strong> secs</p>
-    </div>
-
-                </div>
-            </div>
-        </card>
-    
     
 
 </div>
