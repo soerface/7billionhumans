@@ -26,7 +26,7 @@
         <p class="{{ 'text-success' if solution.speed <= solution.target_speed else 'text-danger' }}">
             <strong>Your solution completes in {{ solution.speed }} seconds, on average.</strong>
         </p>
-        <p>Fastest known solution with >50% success at time of release: <strong>{{ shortest }}</strong> secs</p>
+        <p>Fastest known solution with >50% success at time of release: <strong>{{ fastest }}</strong> secs</p>
     </div>
 {% endmacro %}
 

@@ -41,7 +41,7 @@ def get_target_scores(year):
     with open('challenges.json') as f:
         challenges = json.load(f)
     scores = challenges[str(year)]
-    return scores['size_challenge'], scores['speed_challenge']
+    return scores['size_challenge'], scores['speed_challenge'], scores['shortest_known'], scores['fastest_known']
 
 
 def get_score(path, category):

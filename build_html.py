@@ -45,6 +45,8 @@ def render_year_pages(env: Environment):
             solutions = year['solutions']
             target_size = solutions[0]['target_size']
             target_speed = solutions[0]['target_speed']
+            shortest = solutions[0]['shortest']
+            fastest = solutions[0]['fastest']
             size_solution = min(solutions, key=lambda x: x['size'])
             speed_solution = min(solutions, key=lambda x: x['speed'])
             speed_and_size_solution = min([s for s in solutions if meets_size_and_speed(s)], key=lambda x: x['speed'] + x['size'], default=None)
@@ -59,6 +61,8 @@ def render_year_pages(env: Environment):
                 size_solution=size_solution,
                 speed_solution=speed_solution,
                 speed_and_size_solution=speed_and_size_solution,
+                shortest=shortest,
+                fastest=fastest,
             ))
 
 
@@ -98,13 +102,15 @@ def get_solution_details(path: Path) -> Dict:
     with path.open() as f:
         source = f.read()
     year = int(re.search('\d+', source.split('\n')[1]).group(0))
-    target_size, target_speed = get_target_scores(year)
+    target_size, target_speed, shortest, fastest = get_target_scores(year)
     return {
         'source': pygments.highlight(source, guess_lexer(source), HtmlFormatter()),
         'target_size': target_size,
         'size': get_score(path, 'size'),
         'target_speed': target_speed,
         'speed': get_score(path, 'speed'),
+        'shortest': shortest,
+        'fastest': fastest,
     }
 
 
