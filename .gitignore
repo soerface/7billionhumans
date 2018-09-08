@@ -1,1 +1,4 @@
 _build/
+.idea/
+__pycache__/
+*.py[co]
