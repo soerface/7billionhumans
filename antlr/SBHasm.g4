@@ -19,7 +19,7 @@ items       : (item | mem | MYITEM | NOTHING) ;
 item        : ITEM ;
 write       : WRITE (number | direction | mem) ;
 calc        : mem EQUAL CALC (direction | mem | MYITEM | number) calcop (direction | mem | MYITEM | number);
-setval      : mem EQUAL SET (direction | mem | MYITEM | number) ;
+setval      : mem EQUAL SET (direction | mem | MYITEM | number | NOTHING) ;
 take        : TAKE (direction | mem) ;
 give        : GIVE (direction | mem) ;
 nearest     : mem EQUAL NEAREST item ;
