@@ -1,12 +1,10 @@
 -- 7 Billion Humans (2053) --
 -- 47: Automated Pleasantries --
 
--- Size: 4
+-- Size: 3
 -- Speed: 7
 
-if w == nothing:
-	a:
-	tell e morning
+if w != nothing:
+	listenfor morning
 endif
-listenfor morning
-jump a
+tell e morning
