@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2056) --
 -- 21: Big Data --
 
--- Target Size: 8
+-- Author: ansvonwa
 -- Size: 6
--- Target Speed: 32
 -- Speed: 33
 
 step s

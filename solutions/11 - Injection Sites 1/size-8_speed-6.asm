@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2056) --
 -- 11: Injection Sites 1 --
 
--- Target Size: 5
+-- Author: ansvonwa
 -- Size: 8
--- Target Speed: 7
 -- Speed: 6
 
 step s

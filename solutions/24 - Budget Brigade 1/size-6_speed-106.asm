@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2056) --
 -- 24: Budget Brigade 1 --
 
--- Target Size: 7
+-- Author: ansvonwa
 -- Size: 6
--- Target Speed: 50
 -- Speed: 106
 
 a:

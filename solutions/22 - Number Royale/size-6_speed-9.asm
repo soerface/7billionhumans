@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2056) --
 -- 22: Number Royale --
 
--- Target Size: 6
+-- Author: ansvonwa
 -- Size: 6
--- Target Speed: 11
 -- Speed: 9
 
 pickup s
