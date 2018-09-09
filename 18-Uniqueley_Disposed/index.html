@@ -81,7 +81,12 @@
             x: [12, 5, 6],
             y: [7, 25, 12],
             type: 'pointcloud',
-            text: ["by Unknown","by Unknown","by Unknown",]
+            text: ["by Unknown","by Unknown","by Unknown",],
+            mode: 'markers',
+            marker: {
+                sizemin: 60,
+                sizemax: 60,
+            }
         }];
         layout = {
             title: 'All solutions',
@@ -179,6 +184,15 @@
     }
 ,
             ],
+            images: [
+                
+                    
+                
+                    
+                
+                    
+                
+            ]
         };
 
         Plotly.newPlot('solutionsPlot', data, layout);
@@ -188,6 +202,10 @@
             let speed = data.points[0].y;
             window.location.href = 'size-' + size + '_speed-' + speed + '.html'
         });
+
+        window.onresize = function() {
+            Plotly.Plots.resize(solutionsPlot);
+        };
     </script>
 
 </body>
