@@ -99,7 +99,9 @@ def render_solution_pages(env: Environment):
                 'profile': github_data['html_url'],
             }
         else:
-            author = None
+            author = {
+                'unknown': True
+            }
         with html_path.open('w') as f:
             f.write(template.render(
                 year=year,

@@ -7,13 +7,17 @@
     <h2>{{ size }} commands / {{ speed }} seconds</h2>
     <div class="row">
         <div class="col-md-3">
-            {% if author %}
-                <div class="card userprofile">
+            <div class="card userprofile">
+                {% if author.unknown %}
+                    <img src="https://avatars.githubusercontent.com/_">
+                    <h3>Unknown author</h3>
+                    <p>The solution was submitted without a username</p>
+                {% else %}
                     <img src="{{ author.avatar }}">
                     <h3>{{ author.name }}</h3>
                     <p><i class="fab fa-github"></i> <a href="{{ author.profile }}">{{ author.username }}</a></p>
-                </div>
-            {% endif %}
+                {% endif %}
+            </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">

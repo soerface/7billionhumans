@@ -99,7 +99,6 @@
     <script type="text/javascript" src="../plotly-1.40.1.min.js"></script>
     <script type="text/javascript">
         var solutionsPlot = document.getElementById('solutionsPlot');
-        var xy = new Float32Array([1, 2, 3, 4, 5, 6, 0, 4]);
 
         data = [{
             x: {{ solution_sizes }},
@@ -110,6 +109,7 @@
             marker: {
                 sizemin: 60,
                 sizemax: 60,
+                opacity: 0,
             }
         }];
         layout = {
@@ -128,19 +128,17 @@
             ],
             images: [
                 {% for size, speed, username in solutions %}
-                    {% if username %}
-                        {
-                            "source": "https://avatars.githubusercontent.com/{{ username }}",
-                            "xref": "x",
-                            "yref": "y",
-                            "x": {{ size }},
-                            "y": {{ speed }},
-                            "sizex": {{ size_range / 4 }},
-                            "sizey": {{ speed_range / 4 }},
-                            "xanchor": "center",
-                            "yanchor": "middle"
-                        },
-                    {% endif %}
+                    {
+                        "source": "https://avatars.githubusercontent.com/{{ username or '_' }}",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": {{ size }},
+                        "y": {{ speed }},
+                        "sizex": {{ size_range / 4 }},
+                        "sizey": {{ speed_range / 4 }},
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
                 {% endfor %}
             ]
         };
