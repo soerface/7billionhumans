@@ -4,7 +4,7 @@ grammar SBHasm;
 asm         : line+ ;
 line        : (cmd|comment|label|sbhcomment|sbhcommentd)? (EOL) ;
 cmd         : JUMP | step | pickup | cond | write | drop | calc | setval | take | give
-                | nearest | END | pickup | listen | tell;
+                | nearest | END | pickup | listen | tell | foreachdir;
 pickup      : PICKUP (direction | mem)? ;
 step        : STEP (directions | mem) ;
 directions  : direction (COMMA directions)? ;
@@ -35,6 +35,7 @@ number      : NUMBER ;
 calcop      : CALC_OP ;
 message     : MESSAGE ;
 everyone    : EVERYONE ;
+foreachdir  : mem EQUAL FOREACHDIR directions COLON EOL line+ ENDFOR;
 
 
 
@@ -75,6 +76,8 @@ LISTEN         : 'listenfor' ;
 TELL           : 'tell' ;
 EVERYONE       : 'everyone' ;
 MESSAGE        : 'ready' | 'ok' | 'hi' | 'go' | 'coffeetime' | 'ugh' | 'morning' ;
+FOREACHDIR     : 'foreachdir' ;
+ENDFOR         : 'endfor' ;
 GAMECOMMENT    : 'comment';
 GAMECOMMENTDEF : 'DEFINE COMMENT' ;
 
