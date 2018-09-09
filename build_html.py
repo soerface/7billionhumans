@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+import os
 import re
 from typing import Dict, List
 
@@ -75,7 +76,12 @@ github_cache = {}
 def fetch_github_data(username: str):
     result = github_cache.get(username)
     if not result:
-        response = requests.get(f'https://api.github.com/users/{username}')
+        github_token = os.environ.get('GITHUB_TOKEN')
+        if github_token:
+            headers = {'Authorization': f'token {github_token}'}
+        else:
+            headers = None
+        response = requests.get(f'https://api.github.com/users/{username}', headers=headers)
         if response.status_code not in (200, 404):
             raise Exception(f'Probably had an issue with rate limit. HTTP Status Code: {response.status_code}')
         result = response.json()
