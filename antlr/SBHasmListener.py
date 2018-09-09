@@ -3,7 +3,7 @@ from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .SBHasmParser import SBHasmParser
 else:
-    from SBHasmParser import SBHasmParser
+    from antlr.SBHasmParser import SBHasmParser
 
 # This class defines a complete listener for a parse tree produced by SBHasmParser.
 class SBHasmListener(ParseTreeListener):
