@@ -96,10 +96,10 @@ def render_solution_pages(env: Environment):
         if author_name:
             github_data = fetch_github_data(author_name)
             author = {
-                'username': github_data['login'],
-                'avatar': github_data['avatar_url'],
-                'name': github_data['name'],
-                'profile': github_data['html_url'],
+                'username': github_data.get('login'),
+                'avatar': github_data.get('avatar_url'),
+                'name': github_data.get('name'),
+                'profile': github_data.get('html_url'),
             }
         else:
             author = {
