@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 41: Image Decrypter --
 
--- Target Size: 8
+-- Author: soerface
 -- Size: 35
--- Target Speed: 15
 -- Speed: 9
 
 mem1 = set w

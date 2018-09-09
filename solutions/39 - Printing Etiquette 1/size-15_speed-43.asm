@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 39: Printing Etiquette 1 --
 
--- Target Size: 9
+-- Author: soerface
 -- Size: 15
--- Target Speed: 55
 -- Speed: 43
 
 mem1 = nearest printer

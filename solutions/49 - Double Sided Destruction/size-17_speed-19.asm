@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 49: Double Sided Destruction --
 
+-- Author: soerface
 -- Size: 17
 -- Speed: 19
 

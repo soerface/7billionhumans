@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 7: Collation Station --
 
--- Target Size: 5
+-- Author: soerface
 -- Size: 10
--- Target Speed: 6
 -- Speed: 5
 
 step s

@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 10: Emergency Escapades --
 
--- Target Size: 9
+-- Author: soerface
 -- Size: 40
--- Target Speed: 25
 -- Speed: 19
 
 a:

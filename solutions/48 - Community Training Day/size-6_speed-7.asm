@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 48: Community Training Day --
 
+-- Author: soerface
 -- Size: 6
 -- Speed: 7
 

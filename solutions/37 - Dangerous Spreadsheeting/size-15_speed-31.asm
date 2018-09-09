@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 37: Dangerous Spreadsheeting --
 
--- Target Size: 13
+-- Author: soerface
 -- Size: 15
--- Target Speed: 32
 -- Speed: 31
 
 a:

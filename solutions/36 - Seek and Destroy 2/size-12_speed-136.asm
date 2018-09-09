@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 36: Seek and Destroy 2 --
 
--- Target Size: 10
+-- Author: soerface
 -- Size: 12
--- Target Speed: 145
 -- Speed: 136
 
 mem2 = nearest shredder

@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 44: Unique Fashion Party --
 
+-- Author: soerface
 -- Size: 39
 -- Speed: 50
 

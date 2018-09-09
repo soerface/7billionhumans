@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 54: Terrain Leveler --
 
+-- Author: soerface
 -- Size: 34
 -- Speed: 81
 

@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 18: Uniquely Disposed --
 
--- Target Size: 7
+-- Author: soerface
 -- Size: 6
--- Target Speed: 12
 -- Speed: 12
 
 pickup w

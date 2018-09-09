@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 12: Unzip --
 
--- Target Size: 8
+-- Author: soerface
 -- Size: 8
--- Target Speed: 7
 -- Speed: 7
 
 comment 2

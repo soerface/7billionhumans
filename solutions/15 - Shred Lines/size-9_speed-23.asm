@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 15: Shred Lines --
 
--- Target Size: 9
+-- Author: soerface
 -- Size: 9
--- Target Speed: 23
 -- Speed: 23
 
 a:

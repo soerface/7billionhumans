@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 23: Sorting Hall --
 
--- Target Size: 6
+-- Author: soerface
 -- Size: 6
--- Target Speed: 26
 -- Speed: 24
 
 pickup s

@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 50: Cubical Communication --
 
+-- Author: soerface
 -- Size: 19
 -- Speed: 67
 

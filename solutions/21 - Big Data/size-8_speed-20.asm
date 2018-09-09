@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 21: Big Data --
 
--- Target Size: 8
+-- Author: soerface
 -- Size: 8
--- Target Speed: 32
 -- Speed: 20
 
 step sw

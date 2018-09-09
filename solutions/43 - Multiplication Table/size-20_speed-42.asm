@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 43: Multiplication Table --
 
--- Target Size: 11
+-- Author: soerface
 -- Size: 20
--- Target Speed: 53
 -- Speed: 42
 
 if s == wall:

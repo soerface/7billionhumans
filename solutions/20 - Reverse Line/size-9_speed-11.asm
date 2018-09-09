@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 20: Reverse Line --
 
--- Target Size: 9
+-- Author: soerface
 -- Size: 9
--- Target Speed: 11
 -- Speed: 11
 
 pickup s

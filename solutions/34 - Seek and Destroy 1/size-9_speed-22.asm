@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 34: Seek and Destroy 1 --
 
--- Target Size: 9
+-- Author: soerface
 -- Size: 9
--- Target Speed: 21
 -- Speed: 22
 
 mem1 = set 99

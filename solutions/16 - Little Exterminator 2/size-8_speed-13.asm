@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 16: Little Exterminator 2 --
 
+-- Author: soerface
 -- Size: 8
 -- Speed: 13
 

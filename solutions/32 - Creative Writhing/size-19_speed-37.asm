@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 32: Creative Writhing --
 
--- Target Size: 6
+-- Author: soerface
 -- Size: 19
--- Target Speed: 39
 -- Speed: 37
 
 a:

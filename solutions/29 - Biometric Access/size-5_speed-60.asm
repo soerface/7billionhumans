@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 29: Biometric Access --
 
--- Target Size: 5
+-- Author: soerface
 -- Size: 5
--- Target Speed: 61
 -- Speed: 60
 
 mem1 = nearest shredder

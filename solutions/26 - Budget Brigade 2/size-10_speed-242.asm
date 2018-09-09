@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 26: Budget Brigade 2 --
 
--- Target Size: 10
+-- Author: soerface
 -- Size: 10
--- Target Speed: 70
 -- Speed: 242
 
 a:

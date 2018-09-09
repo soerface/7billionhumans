@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 6: Little Exterminator 1 --
 
--- Target Size: 9
+-- Author: soerface
 -- Size: 9
--- Target Speed: 4
 -- Speed: 3
 
 step s

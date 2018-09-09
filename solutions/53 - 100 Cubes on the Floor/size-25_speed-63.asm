@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 53: 100 Cubes on the Floor --
 
+-- Author: soerface
 -- Size: 25
 -- Speed: 63
 

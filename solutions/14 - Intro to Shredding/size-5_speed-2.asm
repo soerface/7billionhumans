@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 14: Intro to Shredding --
 
--- Target Size: 4
+-- Author: soerface
 -- Size: 5
--- Target Speed: 3
 -- Speed: 2
 
 if s == datacube:

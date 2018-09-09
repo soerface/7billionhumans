@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 13: Injection Sites 2 --
 
--- Target Size: 10
+-- Author: soerface
 -- Size: 44
--- Target Speed: 55
 -- Speed: 6
 
 pickup s

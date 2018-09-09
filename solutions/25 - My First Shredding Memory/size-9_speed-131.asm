@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 25: My First Shredding Memory --
 
--- Target Size: 5
+-- Author: soerface
 -- Size: 9
--- Target Speed: 132
 -- Speed: 131
 
 mem1 = nearest shredder

@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 30: Fill the Floor --
 
--- Target Size: 6
+-- Author: soerface
 -- Size: 6
--- Target Speed: 170
 -- Speed: 737
 
 mem1 = nearest printer

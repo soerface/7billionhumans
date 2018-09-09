@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 51: Identify Yourselves --
 
+-- Author: soerface
 -- Size: 24
 -- Speed: 19
 

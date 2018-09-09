@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 4: Long Distance Delivery --
 
--- Target Size: 4
+-- Author: soerface
 -- Size: 4
--- Target Speed: 7
 -- Speed: 6
 
 step e

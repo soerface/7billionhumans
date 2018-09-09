@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 52: The Mode Code --
 
+-- Author: soerface
 -- Size: 62
 -- Speed: 156
 

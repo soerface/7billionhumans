@@ -1,6 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 38: Seek and Destroy 3 --
 
+-- Author: soerface
 -- Size: 24
 -- Speed: 39
 
