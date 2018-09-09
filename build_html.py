@@ -53,19 +53,19 @@ def render_year_pages(env: Environment):
             # speed_and_size_solution = min([s for s in solutions if meets_size_and_speed(s)], key=lambda x: x['speed'] + x['size'], default=None)
             solution_sizes = [s['size'] for s in solutions]
             solution_speeds = [s['speed'] for s in solutions]
-            solution_authors = [f"by {s.get('author') or 'Unknown'}" for s in solutions]
+            solution_authors = [s.get('author') for s in solutions]
             f.write(template.render(
                 year=year,
                 target_size=target_size,
                 target_speed=target_speed,
                 shortest=shortest,
                 fastest=fastest,
-                solutions=solutions,
                 size_range=max(solution_sizes + [target_size]) + 1,
                 speed_range=max(solution_speeds + [target_speed]) + 1,
                 solution_sizes=solution_sizes,
                 solution_speeds=solution_speeds,
                 solution_authors=solution_authors,
+                solutions=zip(solution_sizes, solution_speeds, solution_authors),
             ))
 
 

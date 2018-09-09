@@ -105,7 +105,12 @@
             x: {{ solution_sizes }},
             y: {{ solution_speeds }},
             type: 'pointcloud',
-            text: [{% for s in solution_authors %}"{{ s }}",{% endfor %}]
+            text: [{% for s in solution_authors %}"by {{ s or 'Unknown' }}",{% endfor %}],
+            mode: 'markers',
+            marker: {
+                sizemin: 60,
+                sizemax: 60,
+            }
         }];
         layout = {
             title: 'All solutions',
@@ -121,6 +126,23 @@
                 {{ render_challenge(target_size, target_speed, '#6dd36a') }},
                 {{ render_challenge(shortest, fastest, '#488a48') }},
             ],
+            images: [
+                {% for size, speed, username in solutions %}
+                    {% if username %}
+                        {
+                            "source": "https://avatars.githubusercontent.com/{{ username }}",
+                            "xref": "x",
+                            "yref": "y",
+                            "x": {{ size }},
+                            "y": {{ speed }},
+                            "sizex": 5,
+                            "sizey": 5,
+                            "xanchor": "center",
+                            "yanchor": "middle"
+                        },
+                    {% endif %}
+                {% endfor %}
+            ]
         };
 
         Plotly.newPlot('solutionsPlot', data, layout);
@@ -130,5 +152,9 @@
             let speed = data.points[0].y;
             window.location.href = 'size-' + size + '_speed-' + speed + '.html'
         });
+
+        window.onresize = function() {
+            Plotly.Plots.resize(solutionsPlot);
+        };
     </script>
 {% endblock %}
