@@ -13,7 +13,7 @@ BASE_PATH = Path('./solutions')
 def get_sourcecode():
     source = subprocess.run(['xclip', '-out', '-selection', 'clipboard'], stdout=subprocess.PIPE).stdout
     if source.startswith(b'-- 7 Billion Humans'):
-        return source.decode().strip().split('\n')
+        return source.decode().split('\n')
 
 
 def read_integer(msg):
@@ -90,7 +90,7 @@ def add_solution():
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()
 
-    size = SevenBillionHumansParser(source='\n'.join(source) + '\n').cmd_size
+    size = SevenBillionHumansParser(source='\n'.join(source)).cmd_size
     add_scores(source, size, speed)
 
     level_id, level_name = get_details(source)
