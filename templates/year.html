@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% set BASE_URL = '../' %}
+
 {% macro render_source(solution) %}
     <div class="card">
         <div class="col-xs-6">
@@ -8,70 +10,124 @@
     </div>
 {% endmacro %}
 
-{% macro render_size_challenge(solution) %}
-    <div class="card">
-        <h4>Size Challenge</h4>
-        <p>Use <strong>{{ target_size }}</strong> or fewer commands.</p>
-        <p class="{{ 'text-success' if solution.size <= solution.target_size else 'text-danger' }}">
-            <strong>Your current solution uses {{ solution.size }} commands.</strong>
-        </p>
-        <p>Shortest known solution with >50% success at time of release: <strong>{{ shortest }}</strong> cmds</p>
-    </div>
-{% endmacro %}
-
-{% macro render_speed_challenge(solution) %}
-    <div class="card">
-        <h4>Speed Challenge</h4>
-        <p>Complete in <strong>{{ target_speed }}</strong> or fewer seconds, averaged over 25 random tests.</p>
-        <p class="{{ 'text-success' if solution.speed <= solution.target_speed else 'text-danger' }}">
-            <strong>Your solution completes in {{ solution.speed }} seconds, on average.</strong>
-        </p>
-        <p>Fastest known solution with >50% success at time of release: <strong>{{ fastest }}</strong> secs</p>
-    </div>
-{% endmacro %}
-
 {% block content %}
     <h2>{{ year.year }} - {{ year.name }}</h2>
-    {% if size_solution %}
-        <card class="container">
-            <div class="row">
-                <div class="col-4">
-                    {{ render_source(size_solution) }}
-                </div>
-                <div class="col-8">
-                    {{ render_size_challenge(size_solution) }}
-                    <hr />
-                    {{ render_speed_challenge(size_solution) }}
-                </div>
-            </div>
-        </card>
-    {% endif %}
-    {% if speed_solution %}
-        <card class="container">
-            <div class="row">
-                <div class="col-4">
-                    {{ render_source(speed_solution) }}
-                </div>
-                <div class="col-8">
-                    {{ render_size_challenge(speed_solution) }}
-                    <hr />
-                    {{ render_speed_challenge(speed_solution) }}
+    <card class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <h4>Size Challenge</h4>
+                    <p>Use <strong>{{ target_size }}</strong> or fewer commands.</p>
+                    <p>
+                        Shortest known solution with >50% success at time of release: <strong>{{ shortest }}</strong>
+                        cmds
+                    </p>
                 </div>
             </div>
-        </card>
-    {% endif %}
-    {% if speed_and_size_solution %}
-        <card class="container">
-            <div class="row">
-                <div class="col-4">
-                    {{ render_source(speed_and_size_solution) }}
-                </div>
-                <div class="col-8">
-                    {{ render_size_challenge(speed_and_size_solution) }}
-                    <hr />
-                    {{ render_speed_challenge(speed_and_size_solution) }}
+            <div class="col-6">
+                <div class="card">
+                    <h4>Speed Challenge</h4>
+                    <p>
+                        Complete in <strong>{{ target_speed }}</strong> or fewer seconds, averaged over 25 random tests.
+                    </p>
+                    <p>
+                        Fastest known solution with >50% success at time of release: <strong>{{ fastest }}</strong> secs
+                    </p>
                 </div>
             </div>
-        </card>
-    {% endif %}
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                    <i class="fas fa-square" style="color: #6dd36a"></i> Challenge<br />
+                    <i class="fas fa-square" style="color: #488a48"></i> Best known
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="solutionsPlot"></div>
+            </div>
+        </div>
+    </card>
+{% endblock %}
+
+{% macro render_challenge(x, y, color) %}
+    {
+    type: 'line',
+    yref: 'paper',
+    x0: {{ x }},
+    y0: 0,
+    x1: {{ x }},
+    y1: 1,
+    opacity: .6,
+    line: {
+    width: 2,
+    color: '{{ color }}',
+    }
+    },
+    {
+    type: 'line',
+    xref: 'paper',
+    x0: 0,
+    y0: {{ y }},
+    x1: 1,
+    y1: {{ y }},
+    opacity: .6,
+    line: {
+    width: 2,
+    color: '{{ color }}',
+    }
+    },
+    {
+    type: 'rect',
+    xref: 'x',
+    yref: 'y',
+    x0: 0,
+    y0: 0,
+    x1: {{ x }},
+    y1: {{ y }},
+    fillcolor: '{{ color }}',
+    opacity: .3,
+    line: {
+    width: 0,
+    }
+    }
+{% endmacro %}
+
+{% block scripts %}
+    <script type="text/javascript" src="../plotly-1.40.1.min.js"></script>
+    <script type="text/javascript">
+        var solutionsPlot = document.getElementById('solutionsPlot');
+        var xy = new Float32Array([1, 2, 3, 4, 5, 6, 0, 4]);
+
+        data = [{
+            x: {{ solution_sizes }},
+            y: {{ solution_speeds }},
+            type: 'pointcloud',
+            text: [{% for s in solution_authors %}"{{ s }}",{% endfor %}]
+        }];
+        layout = {
+            title: 'All solutions',
+            xaxis: {
+                title: 'Size',
+                range: [0, {{ size_range }}]
+            },
+            yaxis: {
+                title: 'Speed',
+                range: [0, {{ speed_range }}]
+            },
+            shapes: [
+                {{ render_challenge(target_size, target_speed, '#6dd36a') }},
+                {{ render_challenge(shortest, fastest, '#488a48') }},
+            ],
+        };
+
+        Plotly.newPlot('solutionsPlot', data, layout);
+
+        solutionsPlot.on('plotly_click', function (data) {
+            let size = data.points[0].x;
+            let speed = data.points[0].y;
+            window.location.href = 'size-' + size + '_speed-' + speed + '.html'
+        });
+    </script>
 {% endblock %}

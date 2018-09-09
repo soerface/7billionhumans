@@ -1,5 +1,4 @@
 #!/usr/bin/env python3.6
-import math
 import re
 from typing import Dict, List
 
@@ -30,6 +29,7 @@ def main():
         f.write(template.render(years=get_years()))
 
     render_year_pages(env)
+    render_solution_pages(env)
 
     for file in STATIC_DIR.glob('*'):
         shutil.copy(file, OUTPUT_DIR / file.name)
@@ -41,29 +41,38 @@ def render_year_pages(env: Environment):
         year = get_year_details(directory)
         if year['coffee_break']:
             continue
-        with open(OUTPUT_DIR / year['slug'], 'w') as f:
+        dir = OUTPUT_DIR / year['slug']
+        if not dir.exists():
+            dir.mkdir()
+        with open(dir / 'index.html', 'w') as f:
             solutions = year['solutions']
             target_size = solutions[0]['target_size']
             target_speed = solutions[0]['target_speed']
             shortest = solutions[0]['shortest']
             fastest = solutions[0]['fastest']
-            size_solution = min(solutions, key=lambda x: x['size'])
-            speed_solution = min(solutions, key=lambda x: x['speed'])
-            speed_and_size_solution = min([s for s in solutions if meets_size_and_speed(s)], key=lambda x: x['speed'] + x['size'], default=None)
-            if size_solution is speed_and_size_solution:
-                size_solution = None
-            if speed_solution is speed_and_size_solution:
-                speed_solution = None
+            # size_solution = min(solutions, key=lambda x: x['size'])
+            # speed_solution = min(solutions, key=lambda x: x['speed'])
+            # speed_and_size_solution = min([s for s in solutions if meets_size_and_speed(s)], key=lambda x: x['speed'] + x['size'], default=None)
+            solution_sizes = [s['size'] for s in solutions]
+            solution_speeds = [s['speed'] for s in solutions]
+            solution_authors = [f"by {s.get('author', 'Unknown')}" for s in solutions]
             f.write(template.render(
                 year=year,
                 target_size=target_size,
                 target_speed=target_speed,
-                size_solution=size_solution,
-                speed_solution=speed_solution,
-                speed_and_size_solution=speed_and_size_solution,
                 shortest=shortest,
                 fastest=fastest,
+                solutions=solutions,
+                size_range=max(solution_sizes + [target_size]) + 1,
+                speed_range=max(solution_speeds + [target_speed]) + 1,
+                solution_sizes=solution_sizes,
+                solution_speeds=solution_speeds,
+                solution_authors=solution_authors,
             ))
+
+
+def render_solution_pages(env: Environment):
+    solutions = [get_solution_details(x) for x in SOLUTIONS_DIR.glob('**/*.asm')]
 
 
 def get_years() -> List[Dict]:
@@ -92,7 +101,7 @@ def get_year_details(path: Path) -> Dict:
         'target_speed': solutions[0]['target_speed'],
         'speed': min([s['speed'] for s in solutions]),
         'size_and_speed': any([meets_size_and_speed(s) for s in solutions]),
-        'slug': slugify(f'{year}-{name}'),
+        'slug': slugify(f'{year}-{name}/'),
         'coffee_break': False,
         'solutions': solutions,
     }
@@ -115,7 +124,7 @@ def get_solution_details(path: Path) -> Dict:
 
 
 def slugify(text):
-    return text.replace(' ', '_') + '.html'
+    return text.replace(' ', '_')
 
 
 def meets_size_and_speed(solution: Dict):
