@@ -1,9 +1,9 @@
 from antlr4 import *
+from antlr4.error.ErrorListener import ErrorListener
+
 from antlr.SBHasmLexer import SBHasmLexer
 from antlr.SBHasmListener import SBHasmListener
 from antlr.SBHasmParser import SBHasmParser
-
-from antlr4.error.ErrorListener import ErrorListener
 
 
 class MyErrorListener(ErrorListener):
@@ -77,5 +77,5 @@ class SevenBillionHumansParser:
 
 
 if __name__ == '__main__':
-    s = SevenBillionHumansParser("../solutions/test/size.asm")
-    print(s.html)
+    s = SevenBillionHumansParser("../solutions/55 - Data Flowers/size-10_speed-23.asm")
+
