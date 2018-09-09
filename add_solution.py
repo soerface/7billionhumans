@@ -26,10 +26,12 @@ def read_integer(msg):
         return n
 
 
-def add_scores(source, size, speed):
+def add_scores(source, size, speed, author=None):
     source.insert(3, '')
     source.insert(3, f'-- Speed: {speed}')
     source.insert(3, f'-- Size: {size}')
+    if author:
+        source.insert(3, f'-- Author: {author}')
 
 
 def get_details(source):
@@ -82,7 +84,7 @@ def save(source, dirname, size, speed):
             subprocess.call(['git', 'rm', '-f', path])
 
 
-def add_solution():
+def add_solution(author):
     speed = read_integer('Speed: ')
 
     source = None
@@ -91,7 +93,7 @@ def add_solution():
         source = get_sourcecode()
 
     size = SevenBillionHumansParser(source='\n'.join(source)).cmd_size
-    add_scores(source, size, speed)
+    add_scores(source, size, speed, author)
 
     level_id, level_name = get_details(source)
     print()
@@ -104,5 +106,6 @@ def add_solution():
 
 
 if __name__ == '__main__':
-    while add_solution():
+    author = input('GitHub username (will be added to your code): ')
+    while add_solution(author):
         pass
