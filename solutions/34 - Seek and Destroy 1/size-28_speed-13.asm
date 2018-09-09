@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 34: Seek and Destroy 1 --
 
--- Target Size: 9
+-- Author: tiansh
 -- Size: 28
--- Target Speed: 21
 -- Speed: 13
 
 mem1 = nearest datacube

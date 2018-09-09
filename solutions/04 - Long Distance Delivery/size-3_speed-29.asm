@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 4: Long Distance Delivery --
 
--- Target Size: 4
+-- Author: tiansh
 -- Size: 3
--- Target Speed: 7
 -- Speed: 29
 
 a:

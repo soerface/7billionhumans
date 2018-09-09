@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 36: Seek and Destroy 2 --
 
--- Target Size: 10
+-- Author: tiansh
 -- Size: 8
--- Target Speed: 145
 -- Speed: 162
 
 mem2 = nearest shredder

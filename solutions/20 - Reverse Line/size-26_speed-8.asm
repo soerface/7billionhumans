@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 20: Reverse Line --
 
--- Target Size: 9
+-- Author: tiansh
 -- Size: 26
--- Target Speed: 11
 -- Speed: 8
 
 step s

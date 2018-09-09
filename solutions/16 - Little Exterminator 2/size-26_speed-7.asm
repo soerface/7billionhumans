@@ -1,9 +1,8 @@
 -- 7 Billion Humans (2053) --
 -- 16: Little Exterminator 2 --
 
--- Target Size: 8
+-- Author: tiansh
 -- Size: 26
--- Target Speed: 9
 -- Speed: 7
 
 step se
