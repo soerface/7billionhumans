@@ -77,7 +77,7 @@ def fetch_github_data(username: str):
     if not result:
         response = requests.get(f'https://api.github.com/users/{username}')
         if response.status_code not in (200, 404):
-            raise Exception('Probably had an issue with rate limit. Response: ' + response)
+            raise Exception(f'Probably had an issue with rate limit. HTTP Status Code: {response.status_code}')
         result = response.json()
         github_cache[username] = result
     return result
