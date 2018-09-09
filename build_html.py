@@ -75,43 +75,7 @@ github_cache = {}
 def fetch_github_data(username: str):
     result = github_cache.get(username)
     if not result:
-        # result = requests.get(f'https://api.github.com/users/{username}').json()
-        import json
-        result = json.loads("""
-{
-  "login": "soerface",
-  "id": 967243,
-  "node_id": "MDQ6VXNlcjk2NzI0Mw==",
-  "avatar_url": "https://avatars1.githubusercontent.com/u/967243?v=4",
-  "gravatar_id": "",
-  "url": "https://api.github.com/users/soerface",
-  "html_url": "https://github.com/soerface",
-  "followers_url": "https://api.github.com/users/soerface/followers",
-  "following_url": "https://api.github.com/users/soerface/following{/other_user}",
-  "gists_url": "https://api.github.com/users/soerface/gists{/gist_id}",
-  "starred_url": "https://api.github.com/users/soerface/starred{/owner}{/repo}",
-  "subscriptions_url": "https://api.github.com/users/soerface/subscriptions",
-  "organizations_url": "https://api.github.com/users/soerface/orgs",
-  "repos_url": "https://api.github.com/users/soerface/repos",
-  "events_url": "https://api.github.com/users/soerface/events{/privacy}",
-  "received_events_url": "https://api.github.com/users/soerface/received_events",
-  "type": "User",
-  "site_admin": false,
-  "name": "Sören Wegener",
-  "company": null,
-  "blog": "",
-  "location": "Germany",
-  "email": null,
-  "hireable": null,
-  "bio": null,
-  "public_repos": 22,
-  "public_gists": 7,
-  "followers": 32,
-  "following": 26,
-  "created_at": "2011-08-08T19:12:48Z",
-  "updated_at": "2018-09-08T14:59:24Z"
-}
-""")
+        result = requests.get(f'https://api.github.com/users/{username}').json()
         github_cache[username] = result
     return result
 
