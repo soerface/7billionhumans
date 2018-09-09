@@ -75,7 +75,6 @@
     <script type="text/javascript" src="../plotly-1.40.1.min.js"></script>
     <script type="text/javascript">
         var solutionsPlot = document.getElementById('solutionsPlot');
-        var xy = new Float32Array([1, 2, 3, 4, 5, 6, 0, 4]);
 
         data = [{
             x: [11, 6],
@@ -86,6 +85,7 @@
             marker: {
                 sizemin: 60,
                 sizemax: 60,
+                opacity: 0,
             }
         }];
         layout = {
@@ -186,9 +186,29 @@
             ],
             images: [
                 
-                    
+                    {
+                        "source": "https://avatars.githubusercontent.com/_",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 11,
+                        "y": 49,
+                        "sizex": 3.0250000000000004,
+                        "sizey": 29.150000000000002,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
                 
-                    
+                    {
+                        "source": "https://avatars.githubusercontent.com/_",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 6,
+                        "y": 106,
+                        "sizex": 3.0250000000000004,
+                        "sizey": 29.150000000000002,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
                 
             ]
         };
