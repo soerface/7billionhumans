@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
 
+{% set BASE_URL = '../' %}
+
 {% block content %}
-Hier der Sourcecode
+    <a href="/">Overview</a> » <a href=".">Year {{ year }}</a> » {{ size }} commands / {{ speed }} seconds
+    <h2>{{ size }} commands / {{ speed }} seconds</h2>
+    <div class="row">
+        <div class="col-md-3">
+            {% if author %}
+                <div class="card userprofile">
+                    <img src="{{ author.avatar }}">
+                    <h3>{{ author.name }}</h3>
+                    <p><i class="fab fa-github"></i> <a href="{{ author.profile }}">{{ author.username }}</a></p>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <div class="card sourcecode">
+                <pre>{{ source }}</pre>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

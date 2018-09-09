@@ -11,11 +11,24 @@
 {% endmacro %}
 
 {% block content %}
+    <a href="/">Overview</a> » Year {{ year.year }}
     <h2>{{ year.year }} - {{ year.name }}</h2>
     <card class="container">
         <div class="row">
+            <div class="col-12">
+                <div id="solutionsPlot"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <i class="fas fa-square" style="color: #6dd36a"></i> Challenge<br/>
+                <i class="fas fa-square" style="color: #488a48"></i> Best known
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
             <div class="col-6">
-                <div class="card">
+                <div class="card challenge">
                     <h4>Size Challenge</h4>
                     <p>Use <strong>{{ target_size }}</strong> or fewer commands.</p>
                     <p>
@@ -25,7 +38,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="card">
+                <div class="card challenge">
                     <h4>Speed Challenge</h4>
                     <p>
                         Complete in <strong>{{ target_speed }}</strong> or fewer seconds, averaged over 25 random tests.
@@ -34,18 +47,6 @@
                         Fastest known solution with >50% success at time of release: <strong>{{ fastest }}</strong> secs
                     </p>
                 </div>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-2">
-                    <i class="fas fa-square" style="color: #6dd36a"></i> Challenge<br />
-                    <i class="fas fa-square" style="color: #488a48"></i> Best known
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div id="solutionsPlot"></div>
             </div>
         </div>
     </card>

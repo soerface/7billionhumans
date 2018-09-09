@@ -1,9 +1,7 @@
 -- 7 Billion Humans (2053) --
 -- 16: Little Exterminator 2 --
 
--- Target Size: 8
 -- Size: 8
--- Target Speed: 9
 -- Speed: 13
 
 comment 0

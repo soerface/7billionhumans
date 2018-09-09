@@ -4,6 +4,24 @@
     }
 }
 
+.card.challenge {
+    height: 200px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+#solutionsPlot {
+    height: 450px;
+}
+
+.card.sourcecode, .userprofile {
+    padding: 10px;
+}
+
+.userprofile img {
+    width: 100%;
+}
+
 /* TODO: tranpile from SASS for easy variable replacement? */
 
 /*.container, .bg-light, .navbar-light {*/
