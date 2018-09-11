@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    
+    
+
+    <title>7 Billion Humans</title>
+</head>
+<body>
+<div class="container">
+    <a href="https://github.com/soerface/7billionhumans"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../">7 Billion Humans</a>
+    </nav>
+    
+    <a href="../">Overview</a> » <a href=".">Year 62</a> » 48 commands / 146 seconds
+    <h2>48 commands / 146 seconds</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card userprofile">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
+                    <h3>Sören Wegener</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card sourcecode">
+                <pre>-- 7 Billion Humans (2053) --
+-- 62: The Sorting Floor --
+
+-- Author: soerface
+-- Size: 48
+-- Speed: 146
+
+if s == worker:
+	jump a
+endif
+b:
+c:
+step n
+if n == datacube:
+	pickup n
+	jump d
+endif
+if n == hole and
+ w == worker and
+ e == worker:
+	jump e
+endif
+jump b
+d:
+f:
+step s
+if s == hole or
+ s == datacube:
+	drop
+	jump c
+endif
+jump f
+a:
+e:
+g:
+step s
+step s
+step s
+step s
+if c == datacube:
+	mem1 = set c
+else:
+	mem1 = set 99
+endif
+mem2 = foreachdir nw,w,sw,n,s,ne,e,se:
+	if mem2 &lt;= mem1:
+		mem1 = set mem2
+	endif
+endfor
+pickup mem1
+h:
+if e != hole:
+	step e
+	jump h
+endif
+i:
+if s != hole:
+	step s
+	jump i
+endif
+step n
+j:
+step n
+if n != hole and
+ n != datacube:
+	jump j
+endif
+k:
+if w != datacube and
+ w != hole:
+	step w
+	jump k
+endif
+drop
+l:
+if n != hole:
+	step n
+	jump l
+endif
+if w == hole:
+	step e
+endif
+if e == hole:
+	step w
+endif
+jump g
+
+
+</pre>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
