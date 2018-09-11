@@ -1,11 +1,15 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 10: Emergency Escapades --
 
--- Author: ansvonwa
+-- Author: landfillbaby
 -- Size: 9
--- Speed: 204
+-- Speed: 203
 
 a:
+if c != datacube or
+ c == 4:
+	step w
+endif
 if c == 1:
 	step n
 endif
@@ -14,9 +18,5 @@ if c == 2:
 endif
 if c == 3:
 	step s
-endif
-if c == 4 or
- c != datacube:
-	step w
 endif
 jump a
