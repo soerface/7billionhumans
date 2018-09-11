@@ -77,10 +77,10 @@
         var solutionsPlot = document.getElementById('solutionsPlot');
 
         data = [{
-            x: [5, 6],
-            y: [5, 5],
+            x: [18, 5, 6],
+            y: [3, 5, 5],
             type: 'pointcloud',
-            text: ["by tiansh","by soerface",],
+            text: ["by soerface","by tiansh","by soerface",],
             mode: 'markers',
             marker: {
                 sizemin: 60,
@@ -92,7 +92,7 @@
             title: 'All solutions',
             xaxis: {
                 title: 'Size',
-                range: [0, 6.6000000000000005]
+                range: [0, 19.8]
             },
             yaxis: {
                 title: 'Speed',
@@ -187,12 +187,24 @@
             images: [
                 
                     {
+                        "source": "https://avatars.githubusercontent.com/soerface",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 18,
+                        "y": 3,
+                        "sizex": 4.95,
+                        "sizey": 1.6500000000000001,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
                         "source": "https://avatars.githubusercontent.com/tiansh",
                         "xref": "x",
                         "yref": "y",
                         "x": 5,
                         "y": 5,
-                        "sizex": 1.6500000000000001,
+                        "sizex": 4.95,
                         "sizey": 1.6500000000000001,
                         "xanchor": "center",
                         "yanchor": "middle"
@@ -204,7 +216,7 @@
                         "yref": "y",
                         "x": 6,
                         "y": 5,
-                        "sizex": 1.6500000000000001,
+                        "sizex": 4.95,
                         "sizey": 1.6500000000000001,
                         "xanchor": "center",
                         "yanchor": "middle"
