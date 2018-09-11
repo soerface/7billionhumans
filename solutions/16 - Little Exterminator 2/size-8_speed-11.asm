@@ -1,23 +1,23 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 16: Little Exterminator 2 --
 
--- Author: soerface
+-- Author: landfillbaby
 -- Size: 8
--- Speed: 13
+-- Speed: 11
 
 comment 0
 a:
+step s
 if c != datacube:
-	step s
 	jump a
 endif
 pickup c
 b:
-if s == shredder:
-	giveto s
-endif
 step e
-jump b
+if se != shredder:
+	jump b
+endif
+giveto se
 
 
 DEFINE COMMENT 0
