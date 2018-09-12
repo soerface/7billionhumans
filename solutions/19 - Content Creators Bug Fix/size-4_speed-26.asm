@@ -1,12 +1,12 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 19: Content Creators Bug Fix --
 
--- Author: soerface
+-- Author: landfillbaby
 -- Size: 4
 -- Speed: 26
 
-step e
+takefrom s
 a:
-takefrom sw
 giveto se
+takefrom sw
 jump a
