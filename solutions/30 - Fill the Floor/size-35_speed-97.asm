@@ -2,7 +2,7 @@
 -- 30: Fill the Floor --
 
 -- Author: soerface
--- Size: 36
+-- Size: 35
 -- Speed: 97
 
 mem1 = nearest printer
@@ -35,14 +35,12 @@ step nw
 step w
 step w
 c:
-if c == nothing:
-	jump d
+if c != nothing:
+	step s
+	jump c
 endif
-step s
-jump c
 comment 0
 d:
-e:
 drop
 mem2 = nearest datacube
 takefrom mem1
@@ -53,7 +51,7 @@ if e == printer:
 else:
 	step e
 endif
-jump e
+jump d
 
 
 DEFINE COMMENT 0
