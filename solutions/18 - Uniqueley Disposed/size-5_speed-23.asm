@@ -1,13 +1,13 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 18: Uniquely Disposed --
 
--- Author: tiansh
+-- Author: landfillbaby
 -- Size: 5
--- Speed: 25
+-- Speed: 23
 
 pickup w
 step sw
 a:
-giveto s
 step se
+giveto s
 jump a
