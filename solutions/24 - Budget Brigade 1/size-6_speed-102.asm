@@ -1,17 +1,17 @@
--- 7 Billion Humans (2056) --
+-- 7 Billion Humans (2087) --
 -- 24: Budget Brigade 1 --
 
--- Author: ansvonwa
+-- Author: landfillbaby
 -- Size: 6
--- Speed: 106
+-- Speed: 102
 
 a:
 if s == printer:
 	takefrom s
 endif
+takefrom w
 if s == shredder and
- myitem == datacube:
+ myitem != nothing:
 	giveto s
 endif
-takefrom w
 jump a
