@@ -1,18 +1,18 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 48: Community Training Day --
 
--- Author: soerface
+-- Author: landfillbaby
 -- Size: 6
--- Speed: 7
+-- Speed: 6
 
 comment 0
 if n != wall:
 	listenfor go
 endif
 takefrom s
+tell everyone go
 mem1 = nearest shredder
 giveto mem1
-tell everyone go
 
 
 DEFINE COMMENT 0
