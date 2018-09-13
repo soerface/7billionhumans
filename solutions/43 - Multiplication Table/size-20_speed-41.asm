@@ -1,25 +1,25 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 43: Multiplication Table --
 
--- Author: soerface
+-- Author: landfillbaby
 -- Size: 20
--- Speed: 42
+-- Speed: 41
 
-if s == wall:
+step n
+step n
+step n
+step n
+step n
+step n
+step n
+step n
+step n
+step n
+mem1 = nearest datacube
+if mem1 == 0:
 	step n
 endif
-step n
-step n
-step n
-step n
-step n
-step n
-step n
-step n
-step n
-step n
-mem1 = set n
-mem2 = set mem1
+mem2 = nearest datacube
 a:
 step s
 pickup c

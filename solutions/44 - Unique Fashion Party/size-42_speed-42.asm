@@ -1,47 +1,52 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 44: Unique Fashion Party --
 
--- Author: soerface
--- Size: 39
--- Speed: 50
+-- Author: landfillbaby
+-- Size: 42
+-- Speed: 42
 
 pickup s
-a:
 step s
-b:
-if sw == worker:
-	jump b
-endif
-if s != wall:
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+step e
+step e
+step e
+a:
+step e
+if se != hole:
 	jump a
 endif
 step e
+if myitem == 6:
+	jump b
+endif
+if myitem == 5:
+	jump c
+endif
+if myitem == 4:
+	jump d
+endif
+if myitem == 3:
+	jump e
+endif
+if myitem == 2:
+	jump f
+endif
+if myitem == 1:
+	jump g
+endif
+jump h
+b:
 step e
 c:
 step e
-if se != hole:
-	jump c
-endif
-step e
-if myitem == 6:
-	jump d
-endif
-if myitem == 5:
-	jump e
-endif
-if myitem == 4:
-	jump f
-endif
-if myitem == 3:
-	jump g
-endif
-if myitem == 2:
-	jump h
-endif
-if myitem == 1:
-	jump i
-endif
-jump j
 d:
 step e
 e:
@@ -51,17 +56,12 @@ step e
 g:
 step e
 h:
-step e
+step n
+step n
 i:
-step e
-j:
-step n
-step n
-step n
-step n
-step n
-k:
 if s == worker:
+	j:
 	step n
+	jump j
 endif
-jump k
+jump i
