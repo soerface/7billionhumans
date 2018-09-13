@@ -84,7 +84,7 @@ def save(source, dirname, size, speed):
     for other_size, other_speed, path in other_scores:
         if size <= other_size and speed <= other_speed:
             print(f'Removed:                                     {str(path):>40}')
-            subprocess.call(['git', 'rm', '-f', path])
+            subprocess.call(['git', 'rm', '-f', str(path)])
 
 
 def add_solution(author):
