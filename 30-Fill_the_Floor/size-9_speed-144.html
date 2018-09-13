@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 18</a> » 6 commands / 12 seconds
-    <h2>6 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 30</a> » 9 commands / 144 seconds
+    <h2>9 commands / 144 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -35,20 +35,24 @@
         <div class="col-md-6">
             <div class="card sourcecode">
                 <pre>-- 7 Billion Humans (2087) --
--- 18: Uniquely Disposed --
+-- 30: Fill the Floor --
 
 -- Author: landfillbaby
--- Size: 6
--- Speed: 12
+-- Size: 9
+-- Speed: 144, 155, 161, 155, 161, 144, 163, 137, 152, 154
 
-pickup w
-step sw
+mem1 = nearest printer
 a:
-if s == worker:
-	step se
-	jump a
+mem2 = nearest wall
+takefrom mem1
+step mem2
+b:
+if c == datacube:
+	step nw,w,sw,n,s,ne,e,se
+	jump b
 endif
-giveto s
+drop
+jump a
 </pre>
             </div>
         </div>

@@ -77,10 +77,10 @@
         var solutionsPlot = document.getElementById('solutionsPlot');
 
         data = [{
-            x: [9],
-            y: [3],
+            x: [8, 9],
+            y: [27, 3],
             type: 'pointcloud',
-            text: ["by soerface",],
+            text: ["by landfillbaby","by soerface",],
             mode: 'markers',
             marker: {
                 sizemin: 60,
@@ -96,7 +96,7 @@
             },
             yaxis: {
                 title: 'Speed',
-                range: [0, 4.4]
+                range: [0, 29.700000000000003]
             },
             shapes: [
                 
@@ -187,13 +187,25 @@
             images: [
                 
                     {
+                        "source": "https://avatars.githubusercontent.com/landfillbaby",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 8,
+                        "y": 27,
+                        "sizex": 2.475,
+                        "sizey": 7.425000000000001,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
                         "source": "https://avatars.githubusercontent.com/soerface",
                         "xref": "x",
                         "yref": "y",
                         "x": 9,
                         "y": 3,
                         "sizex": 2.475,
-                        "sizey": 1.1,
+                        "sizey": 7.425000000000001,
                         "xanchor": "center",
                         "yanchor": "middle"
                     },

@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 18</a> » 6 commands / 12 seconds
-    <h2>6 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 16</a> » 17 commands / 7 seconds
+    <h2>17 commands / 7 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -35,20 +35,33 @@
         <div class="col-md-6">
             <div class="card sourcecode">
                 <pre>-- 7 Billion Humans (2087) --
--- 18: Uniquely Disposed --
+-- 16: Little Exterminator 2 --
 
 -- Author: landfillbaby
--- Size: 6
--- Speed: 12
+-- Size: 17
+-- Speed: 7
 
-pickup w
-step sw
-a:
-if s == worker:
-	step se
+step se
+step s
+step s
+if sw == datacube:
+	pickup sw
 	jump a
 endif
-giveto s
+step s
+if sw == datacube:
+	pickup sw
+	jump b
+endif
+step s
+pickup sw
+step e
+b:
+step e
+a:
+step e
+step se
+giveto se
 </pre>
             </div>
         </div>

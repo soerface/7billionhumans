@@ -26,37 +26,34 @@
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars2.githubusercontent.com/u/6500326?v=4">
-                    <h3>田生</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/tiansh">tiansh</a></p>
+                    <img src="https://avatars0.githubusercontent.com/u/20822924?v=4">
+                    <h3>lucy phipps</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/landfillbaby">landfillbaby</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
+                <pre>-- 7 Billion Humans (2087) --
 -- 12: Unzip --
 
--- Author: tiansh
+-- Author: landfillbaby
 -- Size: 8
 -- Speed: 4
 
 pickup c
 a:
-if w != worker or
+if sw != nothing or
  se == worker:
 	step n
 	drop
 endif
-if w != worker or
- ne == worker or
- e == wall:
+if ne != nothing or
+ nw == worker:
 	step s
 	drop
 endif
 jump a
-
-
 </pre>
             </div>
         </div>

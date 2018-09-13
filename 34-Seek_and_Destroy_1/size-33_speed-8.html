@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 18</a> » 6 commands / 12 seconds
-    <h2>6 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 34</a> » 33 commands / 8 seconds
+    <h2>33 commands / 8 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -35,20 +35,52 @@
         <div class="col-md-6">
             <div class="card sourcecode">
                 <pre>-- 7 Billion Humans (2087) --
--- 18: Uniquely Disposed --
+-- 34: Seek and Destroy 1 --
 
 -- Author: landfillbaby
--- Size: 6
--- Speed: 12
+-- Size: 33
+-- Speed: 8
 
-pickup w
-step sw
-a:
-if s == worker:
-	step se
-	jump a
+mem1 = nearest datacube
+mem4 = nearest shredder
+step mem1
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
 endif
-giveto s
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
+endif
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
+endif
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
+endif
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
+endif
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
+endif
+step n
+mem2 = nearest datacube
+if mem1 &gt; mem2:
+	mem1 = nearest datacube
+endif
+pickup mem1
+giveto mem4
 </pre>
             </div>
         </div>

@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 18</a> » 6 commands / 12 seconds
-    <h2>6 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 10</a> » 28 commands / 16 seconds
+    <h2>28 commands / 16 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -35,20 +35,48 @@
         <div class="col-md-6">
             <div class="card sourcecode">
                 <pre>-- 7 Billion Humans (2087) --
--- 18: Uniquely Disposed --
+-- 10: Emergency Escapades --
 
 -- Author: landfillbaby
--- Size: 6
--- Speed: 12
+-- Size: 28
+-- Speed: 16
 
-pickup w
-step sw
+step w
+step w
 a:
-if s == worker:
-	step se
+b:
+step w
+if c != 1 and
+ s != wall:
+	jump b
+endif
+if s == wall:
+	step nw
 	jump a
 endif
-giveto s
+if nw != hole:
+	step nw
+	jump c
+endif
+if w != hole:
+	step w
+	jump d
+endif
+step sw
+d:
+c:
+step sw
+step s
+step sw
+step w
+step w
+step w
+step nw
+step n
+step n
+step n
+step n
+step nw
 </pre>
             </div>
         </div>

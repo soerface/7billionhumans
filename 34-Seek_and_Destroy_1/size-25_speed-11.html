@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 18</a> » 6 commands / 12 seconds
-    <h2>6 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 34</a> » 25 commands / 11 seconds
+    <h2>25 commands / 11 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -35,20 +35,44 @@
         <div class="col-md-6">
             <div class="card sourcecode">
                 <pre>-- 7 Billion Humans (2087) --
--- 18: Uniquely Disposed --
+-- 34: Seek and Destroy 1 --
 
 -- Author: landfillbaby
--- Size: 6
--- Speed: 12
+-- Size: 25
+-- Speed: 11
 
-pickup w
-step sw
-a:
-if s == worker:
-	step se
-	jump a
+mem1 = nearest datacube
+mem2 = nearest shredder
+step mem1
+step n
+if c &lt; mem1:
+	mem1 = nearest datacube
 endif
-giveto s
+step n
+if c &lt; mem1:
+	mem1 = nearest datacube
+endif
+step n
+if c &lt; mem1:
+	mem1 = nearest datacube
+endif
+step n
+if c &lt; mem1:
+	mem1 = nearest datacube
+endif
+step n
+if c &lt; mem1:
+	mem1 = nearest datacube
+endif
+step n
+if c &lt; mem1:
+	mem1 = nearest datacube
+endif
+if n &lt; mem1:
+	mem1 = set n
+endif
+pickup mem1
+giveto mem2
 </pre>
             </div>
         </div>
