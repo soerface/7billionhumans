@@ -99,7 +99,6 @@ def add_solution(author):
 
     if partial_success or speed_list:
         while input('Do you want to repeat the test to improve the results? [y/N] ').lower() == 'y':
-            print('then please implement it')
             if partial_success:
                 partial_success = (partial_success[0]+25-read_integer('How many red bars? '), partial_success[1]+25)
             if speed_list:
