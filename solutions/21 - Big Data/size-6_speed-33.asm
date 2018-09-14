@@ -3,7 +3,8 @@
 
 -- Author: ansvonwa
 -- Size: 6
--- Speed: 33
+-- Speed: 35
+-- Speed Tests: 33, 39, 38, 39, 35, 35, 35, 32, 34, 36, 34
 
 step s
 a:
