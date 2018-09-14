@@ -2,22 +2,24 @@
 -- 54: Terrain Leveler --
 
 -- Author: tiansh
+-- Author: ansvonwa
 -- Size: 10
--- Speed: 236
+-- Speed: 180
+-- Speed Tests: 179, 198, 181, 182, 161
 
 a:
-step n
-if n == wall:
+if c == nothing:
 	mem1 = calc mem1 + 1
 	b:
-	if s != wall:
-		step s
+	if n != wall:
+		step n
 		pickup c
 		write mem1
 		drop
 		jump b
 	endif
 endif
+step s
 jump a
 
 
