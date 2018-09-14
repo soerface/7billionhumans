@@ -3,8 +3,9 @@
 
 -- Author: landfillbaby
 -- Size: 8
--- Speed: 184
--- Success Rate: 75%
+-- Speed: 186
+-- Speed Tests: 184,189,185,187,185
+-- Success Rate: 76/100
 
 comment 0
 a:
