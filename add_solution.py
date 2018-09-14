@@ -99,10 +99,10 @@ def add_solution(author):
 
     if partial_success or speed_list:
         while input('Do you want to repeat the test to improve the results? [y/N] ').lower() == 'y':
-            if partial_success:
-                partial_success = (partial_success[0]+25-read_integer('How many red bars? '), partial_success[1]+25)
             if speed_list:
                 speed_list += [read_integer('Speed: ')]
+            if partial_success:
+                partial_success = (partial_success[0]+25-read_integer('How many red bars? '), partial_success[1]+25)
 
     if speed_list:
         speed = round(sum(speed_list)/len(speed_list))
