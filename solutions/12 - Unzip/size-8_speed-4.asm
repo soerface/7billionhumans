@@ -1,23 +1,20 @@
--- 7 Billion Humans (2053) --
+-- 7 Billion Humans (2087) --
 -- 12: Unzip --
 
--- Author: tiansh
+-- Author: landfillbaby
 -- Size: 8
 -- Speed: 4
 
 pickup c
 a:
-if w != worker or
+if sw != nothing or
  se == worker:
 	step n
 	drop
 endif
-if w != worker or
- ne == worker or
- e == wall:
+if ne != nothing or
+ nw == worker:
 	step s
 	drop
 endif
 jump a
-
-
