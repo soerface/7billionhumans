@@ -77,8 +77,9 @@ def save(source, dirname, size, speed):
     other_scores = [(get_score(path, 'size'), get_score(path, 'speed'), path) for path in dirname.glob('*.asm')]
 
     if any((other_size <= size and other_speed <= speed for other_size, other_speed, _ in other_scores)):
-        print('Your solution is dominated by another solution, not saving')
-        return
+        if input('Your solution is dominated by another solution. Do you want to add it anyway? [y/N] ').lower() != 'y':
+            print('not saving')
+            return
 
     with path.open('w', newline='\n') as f:
         f.write('\n'.join(source))
