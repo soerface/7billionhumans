@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import re
 import math
+from tkinter import Tk
 
 from antlr.SevenBillionHumansParser import SevenBillionHumansParser
 
@@ -11,9 +12,11 @@ BASE_PATH = Path('./solutions')
 
 
 def get_sourcecode():
-    source = subprocess.run(['xclip', '-out', '-selection', 'clipboard'], stdout=subprocess.PIPE).stdout
-    if source.startswith(b'-- 7 Billion Humans'):
-        return source.decode().split('\n')
+    tk = Tk()
+    tk.withdraw()
+    data = tk.clipboard_get()
+    tk.destroy()
+    return data.split('\n')
 
 
 def read_integer(msg):
@@ -73,15 +76,10 @@ def save(source, dirname, size, speed):
         print('Your solution is dominated by another solution, not saving')
         return
 
-    with path.open('w') as f:
+    with path.open('w', newline='\n') as f:
         f.write('\n'.join(source))
-    subprocess.call(['git', 'add', path])
+    subprocess.call(['git', 'add', str(path)])
     print(f'Saved:                                      {str(path):>40}')
-
-    for other_size, other_speed, path in other_scores:
-        if size <= other_size and speed <= other_speed:
-            print(f'Removed:                                     {str(path):>40}')
-            subprocess.call(['git', 'rm', '-f', path])
 
 
 def add_solution(author):

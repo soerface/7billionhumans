@@ -4,8 +4,7 @@
 -- Author: landfillbaby
 -- Size: 8
 -- Speed: 184
-
--- Fails ~25%!
+-- Success Rate: 75%
 
 comment 0
 a:

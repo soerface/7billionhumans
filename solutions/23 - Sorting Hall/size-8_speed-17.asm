@@ -3,7 +3,7 @@
 
 -- Author: soerface
 -- Size: 8
--- Speed: 16
+-- Speed: 17
 
 pickup s
 a:
