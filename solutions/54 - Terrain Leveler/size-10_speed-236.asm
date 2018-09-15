@@ -5,7 +5,7 @@
 -- Author: ansvonwa
 -- Size: 10
 -- Speed: 180
--- Speed Tests: 179, 198, 181, 182, 161
+-- Speed Tests: 179, 198, 181, 182, 161, 171, 185
 
 a:
 if c == nothing:
