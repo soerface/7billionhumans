@@ -5,6 +5,7 @@ import subprocess
 import re
 import math
 from tkinter import Tk
+from typing import Tuple, List
 
 from antlr.SevenBillionHumansParser import SevenBillionHumansParser
 
@@ -29,7 +30,7 @@ def read_integer(msg):
         return n
 
 
-def add_scores(source, size, speed, author=None, speed_list=None, partial_success=None):
+def add_scores(source, size, speed, author=None, speed_list: List[int]=None, partial_success: Tuple[int, int]=None):
     source.insert(3, '')
     if partial_success:
         source.insert(3, f'-- Success Rate: {partial_success[0]}/{partial_success[1]}')
