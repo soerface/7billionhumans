@@ -3,7 +3,8 @@
 
 -- Author: tiansh
 -- Size: 10
--- Speed: 236
+-- Speed: 255
+-- Speed Tests: 236, 247, 262, 251, 275, 260, 277, 273, 244, 222
 
 a:
 step n
