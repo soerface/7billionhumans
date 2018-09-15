@@ -4,7 +4,7 @@
 -- Author: ansvonwa
 -- Size: 10
 -- Speed: 190
--- Speed Tests: 193, 186, 191
+-- Speed Tests: 193, 186, 191, 191, 187
 
 a:
 if n == worker:
