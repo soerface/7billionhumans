@@ -35,7 +35,8 @@ def add_scores(source, size, speed, author=None, speed_list: List[int]=None, par
     if partial_success:
         source.insert(3, f'-- Success Rate: {partial_success[0]}/{partial_success[1]}')
     if speed_list:
-        source.insert(3, f'-- Speed Tests: {str(speed_list)[1:-1]}')
+        speed_tests = ', '.join(map(str, speed_list))
+        source.insert(3, f'-- Speed Tests: {speed_tests}')
     source.insert(3, f'-- Speed: {speed}')
     source.insert(3, f'-- Size: {size}')
     if author:
