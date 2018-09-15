@@ -20,41 +20,52 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 21</a> » 8 commands / 20 seconds
-    <h2>8 commands / 20 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 26</a> » 8 commands / 186 seconds
+    <h2>8 commands / 186 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
-                    <h3>Sören Wegener</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                    <img src="https://avatars0.githubusercontent.com/u/20822924?v=4">
+                    <h3>lucy phipps</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/landfillbaby">landfillbaby</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
--- 21: Big Data --
+                <pre>-- 7 Billion Humans (2087) --
+-- 26: Budget Brigade 2 --
 
--- Author: soerface
+-- Author: landfillbaby
 -- Size: 8
--- Speed: 20
+-- Speed: 186
+-- Speed Tests: 184, 189, 185, 187, 185
+-- Success Rate: 76/100
 
-step sw
+comment 0
 a:
-if s != shredder:
-	step s
-	jump a
+if s == printer or
+ s &gt;= 0 and
+ myitem != datacube:
+	takefrom s
 endif
-b:
-takefrom se
+if s == shredder and
+ myitem == datacube:
+	giveto s
+endif
 if myitem &lt; 50:
-	giveto sw
-	jump b
+	giveto w
 endif
+giveto e
+jump a
 
-
+DEFINE COMMENT 0
+eJztkD9LwmEUhZ8vEGU1NYaYNDhEWZBYlGBDhTRIQxiURH+WBAmHiDulQ4ODg0NDQ1lZkKA1SYSDVIpD
+NDT2UTq/91sEHnjg5byXe8+9CaQBfhnkzXxUGKEgThjCj49xJhizEKM2w7BXKi9t06S9p8UJsEyMeUo2
+xwuztCzMj/tbYcrW2SDBniW5FHe2yavrsUDOYuRY5ZQ1zpx3QIRD9sUVR9REy/kpFm1b7BCxrGo87fLO
+scjwSVZ4yhO0AklRtHN5eXpWoueyPBHkUTwwaVVC3BLmhqhdsyS2tHWKqibXlKvBBc/apyGnTtPu+bIK
+325GVzfoKEOHsuv7QZu++vrn+gPQwkt2;
 </pre>
             </div>
         </div>

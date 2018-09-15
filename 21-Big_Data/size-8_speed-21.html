@@ -20,39 +20,42 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 30</a> » 9 commands / 144 seconds
-    <h2>9 commands / 144 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 21</a> » 8 commands / 21 seconds
+    <h2>8 commands / 21 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars0.githubusercontent.com/u/20822924?v=4">
-                    <h3>lucy phipps</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/landfillbaby">landfillbaby</a></p>
+                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
+                    <h3>Sören Wegener</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2087) --
--- 30: Fill the Floor --
+                <pre>-- 7 Billion Humans (2053) --
+-- 21: Big Data --
 
--- Author: landfillbaby
--- Size: 9
--- Speed: 144, 155, 161, 155, 161, 144, 163, 137, 152, 154
+-- Author: soerface
+-- Size: 8
+-- Speed: 21
+-- Speed Tests: 20, 22, 18, 20, 23, 23, 20, 23, 18, 22, 23
 
-mem1 = nearest printer
+step sw
 a:
-mem2 = nearest wall
-takefrom mem1
-step mem2
+if s != shredder:
+	step s
+	jump a
+endif
 b:
-if c == datacube:
-	step nw,w,sw,n,s,ne,e,se
+takefrom se
+if myitem &lt; 50:
+	giveto sw
 	jump b
 endif
-drop
-jump a
+
+
 </pre>
             </div>
         </div>

@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 26</a> » 8 commands / 184 seconds
-    <h2>8 commands / 184 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 30</a> » 9 commands / 153 seconds
+    <h2>9 commands / 153 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -35,36 +35,25 @@
         <div class="col-md-6">
             <div class="card sourcecode">
                 <pre>-- 7 Billion Humans (2087) --
--- 26: Budget Brigade 2 --
+-- 30: Fill the Floor --
 
 -- Author: landfillbaby
--- Size: 8
--- Speed: 184
--- Success Rate: 75%
+-- Size: 9
+-- Speed: 153
+-- Speed Tests: 144, 155, 161, 155, 161, 144, 163, 137, 152, 154
 
-comment 0
+mem1 = nearest printer
 a:
-if s == printer or
- s &gt;= 0 and
- myitem != datacube:
-	takefrom s
+mem2 = nearest wall
+takefrom mem1
+step mem2
+b:
+if c == datacube:
+	step nw,w,sw,n,s,ne,e,se
+	jump b
 endif
-if s == shredder and
- myitem == datacube:
-	giveto s
-endif
-if myitem &lt; 50:
-	giveto w
-endif
-giveto e
+drop
 jump a
-
-DEFINE COMMENT 0
-eJztkD9LwmEUhZ8vEGU1NYaYNDhEWZBYlGBDhTRIQxiURH+WBAmHiDulQ4ODg0NDQ1lZkKA1SYSDVIpD
-NDT2UTq/91sEHnjg5byXe8+9CaQBfhnkzXxUGKEgThjCj49xJhizEKM2w7BXKi9t06S9p8UJsEyMeUo2
-xwuztCzMj/tbYcrW2SDBniW5FHe2yavrsUDOYuRY5ZQ1zpx3QIRD9sUVR9REy/kpFm1b7BCxrGo87fLO
-scjwSVZ4yhO0AklRtHN5eXpWoueyPBHkUTwwaVVC3BLmhqhdsyS2tHWKqibXlKvBBc/apyGnTtPu+bIK
-325GVzfoKEOHsuv7QZu++vrn+gPQwkt2;
 </pre>
             </div>
         </div>
