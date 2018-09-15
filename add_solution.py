@@ -29,8 +29,12 @@ def read_integer(msg):
         return n
 
 
-def add_scores(source, size, speed, author=None):
+def add_scores(source, size, speed, author=None, speed_list=None, partial_success=None):
     source.insert(3, '')
+    if partial_success:
+        source.insert(3, f'-- Success Rate: {partial_success[0]}/{partial_success[1]}')
+    if speed_list:
+        source.insert(3, f'-- Speed Tests: {str(speed_list)[1:-1]}')
     source.insert(3, f'-- Speed: {speed}')
     source.insert(3, f'-- Size: {size}')
     if author:
@@ -73,8 +77,9 @@ def save(source, dirname, size, speed):
     other_scores = [(get_score(path, 'size'), get_score(path, 'speed'), path) for path in dirname.glob('*.asm')]
 
     if any((other_size <= size and other_speed <= speed for other_size, other_speed, _ in other_scores)):
-        print('Your solution is dominated by another solution, not saving')
-        return
+        if input('Your solution is dominated by another solution. Do you want to add it anyway? [y/N] ').lower() != 'y':
+            print('not saving')
+            return
 
     with path.open('w', newline='\n') as f:
         f.write('\n'.join(source))
@@ -85,13 +90,31 @@ def save(source, dirname, size, speed):
 def add_solution(author):
     speed = read_integer('Speed: ')
 
+    partial_success=None
+    if input('Were there failing solutions (red bars instead of green ones)? [y/N] ').lower() == 'y':
+        partial_success = (25-read_integer('How many red bars were there? '), 25)
+
+    speed_list = None
+    if input('Were there different times in different measurements? [y/N] ').lower() == 'y':
+        speed_list = [speed]
+
+    if partial_success or speed_list:
+        while input('Do you want to repeat the test to improve the results? [y/N] ').lower() == 'y':
+            if speed_list:
+                speed_list += [read_integer('Speed: ')]
+            if partial_success:
+                partial_success = (partial_success[0]+25-read_integer('How many red bars? '), partial_success[1]+25)
+
+    if speed_list:
+        speed = round(sum(speed_list)/len(speed_list))
+
     source = None
     while not source:
         input('Copy the sourcecode to the clipboard and press enter\n')
         source = get_sourcecode()
 
     size = SevenBillionHumansParser(source='\n'.join(source)).cmd_size
-    add_scores(source, size, speed, author)
+    add_scores(source, size, speed, author, speed_list, partial_success)
 
     level_id, level_name = get_details(source)
     print()

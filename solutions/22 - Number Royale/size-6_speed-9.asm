@@ -4,6 +4,7 @@
 -- Author: ansvonwa
 -- Size: 6
 -- Speed: 9
+-- Speed Tests: 9, 9, 9
 
 pickup s
 a:
