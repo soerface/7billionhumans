@@ -4,6 +4,7 @@
 -- Author: landfillbaby
 -- Size: 9
 -- Speed: 128
+-- Speed Tests: 128, 128, 127, 127, 128, 128
 
 a:
 if s == printer or

@@ -4,6 +4,7 @@
 -- Author: soerface
 -- Size: 6
 -- Speed: 24
+-- Speed Tests: 24, 25, 23, 24, 26, 24, 23
 
 pickup s
 a:
