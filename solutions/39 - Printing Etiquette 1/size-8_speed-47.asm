@@ -3,7 +3,8 @@
 
 -- Author: landfillbaby
 -- Size: 8
--- Speed: 46
+-- Speed: 47
+-- Speed Tests: 46, 46, 48, 47, 47, 47, 48, 48, 47, 46
 
 a:
 mem1 = nearest printer
