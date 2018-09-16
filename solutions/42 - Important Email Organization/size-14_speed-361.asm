@@ -3,7 +3,8 @@
 
 -- Author: landfillbaby
 -- Size: 14
--- Speed: 353
+-- Speed: 361
+-- Speed Tests: 353, 360, 383, 359, 360, 362, 364, 352, 356, 358
 
 a:
 step nw,w,sw,n,ne,e,se
