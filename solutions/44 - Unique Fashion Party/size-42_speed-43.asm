@@ -3,7 +3,8 @@
 
 -- Author: landfillbaby
 -- Size: 42
--- Speed: 42
+-- Speed: 43
+-- Speed Tests: 42, 43, 43, 43, 43, 43, 43, 43, 42, 43
 
 pickup s
 step s
