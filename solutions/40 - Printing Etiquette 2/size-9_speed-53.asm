@@ -4,6 +4,7 @@
 -- Author: landfillbaby
 -- Size: 9
 -- Speed: 53
+-- Speed Tests: 53, 53, 53, 55, 54, 53, 53, 52, 53, 53
 
 a:
 mem1 = nearest printer
