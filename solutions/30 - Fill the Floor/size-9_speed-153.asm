@@ -3,7 +3,8 @@
 
 -- Author: landfillbaby
 -- Size: 9
--- Speed: 144, 155, 161, 155, 161, 144, 163, 137, 152, 154
+-- Speed: 153
+-- Speed Tests: 144, 155, 161, 155, 161, 144, 163, 137, 152, 154
 
 mem1 = nearest printer
 a:

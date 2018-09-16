@@ -4,6 +4,7 @@
 -- Author: landfillbaby
 -- Size: 5
 -- Speed: 10
+-- Speed Tests: 10, 10, 11, 10, 10
 
 pickup s
 a:
