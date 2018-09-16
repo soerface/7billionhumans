@@ -3,7 +3,7 @@
 
 -- Author: landfillbaby
 -- Size: 18
--- Speed:
+-- Speed: 170
 -- Speed Tests: 169, 170, 172, 170, 171, 170, 169, 171, 169, 168
 -- Success Rate: 222/225
 
