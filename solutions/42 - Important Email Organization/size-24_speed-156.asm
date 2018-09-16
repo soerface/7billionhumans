@@ -3,7 +3,8 @@
 
 -- Author: landfillbaby
 -- Size: 24
--- Speed: 154
+-- Speed: 156
+-- Speed Tests: 154, 157, 158, 156, 156, 159, 156, 156, 155, 155
 
 mem1 = nearest datacube
 step mem1
