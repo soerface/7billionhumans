@@ -3,7 +3,9 @@
 
 -- Author: landfillbaby
 -- Size: 5
--- Speed: 608
+-- Speed: 623
+-- Speed Tests: 608, 673, 619, 580, 633
+-- Seccess Rate: 99/100
 
 mem1 = nearest printer
 a:
