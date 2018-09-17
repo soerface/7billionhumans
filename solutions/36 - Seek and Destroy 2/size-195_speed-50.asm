@@ -2,7 +2,7 @@
 -- 36: Seek and Destroy 2 --
 
 -- Author: ansvonwa
--- Size: 197
+-- Size: 195
 -- Speed: 50
 -- Speed Tests: 50, 50, 50
 
@@ -120,7 +120,6 @@ if mem4 <= mem3:
 		endif
 	endif
 endif
-e:
 pickup mem1
 mem1 = nearest shredder
 giveto mem1
@@ -132,11 +131,11 @@ if mem4 == datacube and
  mem4 != mem3:
 	step mem4
 	mem1 = set mem4
-	f:
+	e:
 	mem2 = set s
 	if mem2 == nothing:
 		step s
-		jump f
+		jump e
 	endif
 	if mem1 > mem2:
 		mem4 = set mem1
@@ -144,14 +143,14 @@ if mem4 == datacube and
 		mem2 = set mem4
 	else:
 		if mem2 == shredder:
-			jump g
+			jump f
 		endif
 	endif
-	h:
+	g:
 	step s
 	mem3 = set s
 	if mem3 == nothing:
-		jump h
+		jump g
 	endif
 	if mem3 < mem2:
 		mem4 = set mem3
@@ -164,14 +163,14 @@ if mem4 == datacube and
 		endif
 	else:
 		if mem3 == shredder:
-			jump i
+			jump h
 		endif
 	endif
-	j:
+	i:
 	step s
 	mem4 = set s
 	if mem4 == nothing:
-		jump j
+		jump i
 	endif
 	if mem4 < mem2:
 		if mem4 < mem1:
@@ -191,28 +190,28 @@ if mem4 == datacube and
 		endif
 	endif
 else:
-	k:
+	j:
 	step n
 	mem1 = set n
 	if mem1 == nothing:
-		jump k
+		jump j
 	endif
-	l:
+	k:
 	step n
 	mem2 = set n
 	if mem2 == nothing:
-		jump l
+		jump k
 	endif
 	if mem2 < mem1:
 		mem3 = set mem1
 		mem1 = set mem2
 		mem2 = set mem3
 	endif
-	m:
+	l:
 	step n
 	mem3 = set n
 	if mem3 == nothing:
-		jump m
+		jump l
 	endif
 	if mem3 < mem2:
 		if mem3 < mem1:
@@ -226,11 +225,11 @@ else:
 			mem2 = set mem4
 		endif
 	endif
-	n:
+	m:
 	step n
 	mem4 = set n
 	if mem4 == nothing:
-		jump n
+		jump m
 	endif
 	if mem4 < mem3:
 		if mem4 < mem2:
@@ -249,8 +248,8 @@ else:
 			mem3 = set n
 		endif
 	endif
-	g:
-	i:
+	f:
+	h:
 endif
 pickup mem1
 mem1 = nearest shredder
@@ -261,8 +260,6 @@ pickup mem3
 giveto mem1
 pickup mem4
 giveto mem1
-o:
-jump o
-jump e
+
 
 
