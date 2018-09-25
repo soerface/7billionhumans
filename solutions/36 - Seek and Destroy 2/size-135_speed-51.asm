@@ -4,7 +4,7 @@
 -- Author: ansvonwa
 -- Size: 135
 -- Speed: 51
--- Speed Tests: 51, 51, 51, 51
+-- Speed Tests: 51, 51, 51, 51, 52
 
 a:
 step n
