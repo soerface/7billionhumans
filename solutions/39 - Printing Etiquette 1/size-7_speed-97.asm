@@ -4,7 +4,7 @@
 -- Author: ansvonwa
 -- Size: 7
 -- Speed: 97
--- Speed Tests: 98, 96, 97
+-- Speed Tests: 98, 96, 97, 97
 
 mem1 = nearest printer
 a:
