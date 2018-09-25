@@ -4,8 +4,8 @@
 -- Author: ansvonwa
 -- Size: 10
 -- Speed: 152
--- Speed Tests: 151, 152, 152
--- Success Rate: 51/75
+-- Speed Tests: 151, 152, 152, 151
+-- Success Rate: 68/100
 
 a:
 mem1 = set 99
