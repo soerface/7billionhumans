@@ -4,6 +4,8 @@
 -- Author: soerface
 -- Size: 24
 -- Speed: 39
+-- Speed Tests: 39, 39, 39
+-- Success Rate: 48/50
 
 mem2 = set nothing
 a:
