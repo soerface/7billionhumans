@@ -20,43 +20,63 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 18</a> » 6 commands / 12 seconds
-    <h2>6 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 65</a> » 18 commands / 587 seconds
+    <h2>18 commands / 587 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
-                    <h3>Sören Wegener</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                    <img src="https://avatars2.githubusercontent.com/u/6500326?v=4">
+                    <h3>田生</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/tiansh">tiansh</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
--- 18: Uniquely Disposed --
+                <pre>-- 7 Billion Humans (2056) --
+-- 65: Defrag Ordered --
 
--- Author: soerface
--- Size: 6
--- Speed: 12
+-- Author: tiansh
+-- Size: 18
+-- Speed: 587
 
-pickup w
-step sw
 a:
-if s == shredder:
-	giveto s
-	comment 0
+b:
+if n != hole:
+	step n
+	jump b
 endif
-step se
-jump a
+c:
+d:
+if w != hole:
+	step w
+	jump d
+endif
+e:
+if mem1 == 0 and
+ c == nothing and
+ myitem == nothing:
+	mem1 = set 1
+endif
+if mem1 == 1 and
+ c == datacube and
+ myitem == nothing:
+	pickup c
+	jump a
+endif
+if mem1 == 1 and
+ c == nothing and
+ myitem == datacube:
+	drop
+endif
+if e != hole:
+	step e
+	jump e
+endif
+step s
+jump c
 
-
-DEFINE COMMENT 0
-eJztjbFqwgAURc+3tNLSRVspFTRKBnEobSziFERMKXVzKhlCWy7SgkiHkiG42Do4SMjQD8jH+ZK5n5AL
-l/e4nHdfG9ApN6rRp8bGZsoJB4r8jEs1uJZDnS7NIuOciCsitQjVISyzCzI1SeWyL+88vnXPk/lWQ/p6
-wNEIVz4TpiwUWMcj7zbXmvFi9gkYMzd2btwzvbIn4o43I5fGLknKX2Jg+0Af1v2Fp5ixfqxjx8oc65dE
-W2M/yY3LeeXPOjIqVar0r46GRTpa;
 
 </pre>
             </div>
