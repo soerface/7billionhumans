@@ -4,8 +4,8 @@
 -- Author: ansvonwa
 -- Size: 219
 -- Speed: 107
--- Speed Tests: 111, 107, 104, 107, 108, 109, 104, 105
--- Success Rate: 188/200
+-- Speed Tests: 111, 107, 104, 107, 108, 109, 104, 105, 112
+-- Success Rate: 212/225
 
 if w == worker:
 	step se
