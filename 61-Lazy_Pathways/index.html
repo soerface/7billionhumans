@@ -77,10 +77,10 @@
         var solutionsPlot = document.getElementById('solutionsPlot');
 
         data = [{
-            x: [13],
-            y: [346],
+            x: [11, 18, 13],
+            y: [346, 203, 346],
             type: 'pointcloud',
-            text: ["by soerface",],
+            text: ["by landfillbaby","by landfillbaby","by soerface",],
             mode: 'markers',
             marker: {
                 sizemin: 60,
@@ -92,7 +92,7 @@
             title: 'All solutions',
             xaxis: {
                 title: 'Size',
-                range: [0, 14.3]
+                range: [0, 19.8]
             },
             yaxis: {
                 title: 'Speed',
@@ -187,12 +187,36 @@
             images: [
                 
                     {
+                        "source": "https://avatars.githubusercontent.com/landfillbaby",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 11,
+                        "y": 346,
+                        "sizex": 4.95,
+                        "sizey": 95.15,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
+                        "source": "https://avatars.githubusercontent.com/landfillbaby",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 18,
+                        "y": 203,
+                        "sizex": 4.95,
+                        "sizey": 95.15,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
                         "source": "https://avatars.githubusercontent.com/soerface",
                         "xref": "x",
                         "yref": "y",
                         "x": 13,
                         "y": 346,
-                        "sizex": 3.575,
+                        "sizex": 4.95,
                         "sizey": 95.15,
                         "xanchor": "center",
                         "yanchor": "middle"

@@ -77,10 +77,10 @@
         var solutionsPlot = document.getElementById('solutionsPlot');
 
         data = [{
-            x: [15],
-            y: [96],
+            x: [9, 15, 30],
+            y: [982, 96, 36],
             type: 'pointcloud',
-            text: ["by soerface",],
+            text: ["by landfillbaby","by soerface","by landfillbaby",],
             mode: 'markers',
             marker: {
                 sizemin: 60,
@@ -92,11 +92,11 @@
             title: 'All solutions',
             xaxis: {
                 title: 'Size',
-                range: [0, 17.6]
+                range: [0, 33.0]
             },
             yaxis: {
                 title: 'Speed',
-                range: [0, 110.00000000000001]
+                range: [0, 1080.2]
             },
             shapes: [
                 
@@ -187,13 +187,37 @@
             images: [
                 
                     {
+                        "source": "https://avatars.githubusercontent.com/landfillbaby",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 9,
+                        "y": 982,
+                        "sizex": 8.25,
+                        "sizey": 270.05,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
                         "source": "https://avatars.githubusercontent.com/soerface",
                         "xref": "x",
                         "yref": "y",
                         "x": 15,
                         "y": 96,
-                        "sizex": 4.4,
-                        "sizey": 27.500000000000004,
+                        "sizex": 8.25,
+                        "sizey": 270.05,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
+                        "source": "https://avatars.githubusercontent.com/landfillbaby",
+                        "xref": "x",
+                        "yref": "y",
+                        "x": 30,
+                        "y": 36,
+                        "sizex": 8.25,
+                        "sizey": 270.05,
                         "xanchor": "center",
                         "yanchor": "middle"
                     },

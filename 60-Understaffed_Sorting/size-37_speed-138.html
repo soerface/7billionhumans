@@ -20,84 +20,73 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 30</a> » 35 commands / 97 seconds
-    <h2>35 commands / 97 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 60</a> » 37 commands / 138 seconds
+    <h2>37 commands / 138 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
-                    <h3>Sören Wegener</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                    <img src="https://avatars0.githubusercontent.com/u/20822924?v=4">
+                    <h3>lucy phipps</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/landfillbaby">landfillbaby</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
--- 30: Fill the Floor --
+                <pre>-- 7 Billion Humans (2145) --
+-- 60: Understaffed Sorting --
 
--- Author: soerface
 -- Author: landfillbaby
--- Size: 35
--- Speed: 97
+-- Size: 37
+-- Speed: 138
 
-mem1 = nearest printer
-if n == wall and
- w == nothing and
- e == worker:
-	a:
-	takefrom mem1
-	step se
-	step se
-	step e
-	step e
-	step e
-	b:
-	if c == nothing:
-		drop
-		jump a
-	endif
-	if e == wall:
-		step sw
-		step w
-	else:
-		step e
-	endif
-	jump b
+if e == worker:
+	step w
+	step w
 endif
-takefrom mem1
-step nw
-step nw
-step w
-step w
-c:
-if c != nothing:
+a:
+b:
+if se &lt; s and
+ se == datacube and
+ s == datacube and
+ sw != worker and
+ w != worker:
+	pickup s
+	drop
+	pickup se
 	step s
-	jump c
+	drop
+	pickup n
+	step e
+	drop
+	step n
+	jump a
 endif
-comment 0
-d:
-drop
-mem2 = nearest datacube
-takefrom mem1
-step mem2
-if e == printer:
-	step se
-	step ne
+if e == wall:
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
 else:
 	step e
 endif
-jump d
-
-
-DEFINE COMMENT 0
-eJztjk9HhHEUhZ+PkCkRGQ1p8TZGlBYjidpERMtpjMzilWSkRWkkR4vaNbMcLaJ/kmgifYB5p6JFtOrz
-dH6/j5G5PK5773HOXQc0xAQ5yspRJ8zDjDNKXgXycR7xbcwUWAwzCUUlVDXNVrzPkpg6c6QssxM1q1at
-ccAGe1RosMlu3B9RMlUdcqpjmpxbEzxazKvNiklpe98yYX+NTFM37LunpsYtZTOlO0q6Z0EPTnp00pP/
-eXZW15ld+75yphdqemMyevUo0mPGLJFZn/nnPg1lnKjPhbmKusy+H9b9+NdQn2zzbcLtnUt90dEvHQY1
-qH9Qf6o0Smc;
-</pre>
+jump b</pre>
             </div>
         </div>
     </div>

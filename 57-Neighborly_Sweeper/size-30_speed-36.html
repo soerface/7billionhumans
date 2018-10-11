@@ -20,84 +20,71 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 30</a> » 35 commands / 97 seconds
-    <h2>35 commands / 97 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 57</a> » 30 commands / 36 seconds
+    <h2>30 commands / 36 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
-                    <h3>Sören Wegener</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                    <img src="https://avatars0.githubusercontent.com/u/20822924?v=4">
+                    <h3>lucy phipps</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/landfillbaby">landfillbaby</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
--- 30: Fill the Floor --
+                <pre>-- 7 Billion Humans (2145) --
+-- 57: Neighborly Sweeper --
 
--- Author: soerface
 -- Author: landfillbaby
--- Size: 35
--- Speed: 97
+-- Size: 30
+-- Speed: 36
 
-mem1 = nearest printer
-if n == wall and
- w == nothing and
- e == worker:
-	a:
-	takefrom mem1
-	step se
-	step se
-	step e
-	step e
-	step e
-	b:
-	if c == nothing:
-		drop
-		jump a
-	endif
-	if e == wall:
-		step sw
-		step w
-	else:
-		step e
-	endif
-	jump b
+if w == wall:
+	mem4 = set 1
 endif
-takefrom mem1
-step nw
-step nw
-step w
-step w
-c:
-if c != nothing:
-	step s
-	jump c
-endif
-comment 0
-d:
-drop
-mem2 = nearest datacube
-takefrom mem1
-step mem2
-if e == printer:
-	step se
-	step ne
+a:
+if mem4 == 1:
+	step e
 else:
-	step e
+	step w
 endif
-jump d
-
-
-DEFINE COMMENT 0
-eJztjk9HhHEUhZ+PkCkRGQ1p8TZGlBYjidpERMtpjMzilWSkRWkkR4vaNbMcLaJ/kmgifYB5p6JFtOrz
-dH6/j5G5PK5773HOXQc0xAQ5yspRJ8zDjDNKXgXycR7xbcwUWAwzCUUlVDXNVrzPkpg6c6QssxM1q1at
-ccAGe1RosMlu3B9RMlUdcqpjmpxbEzxazKvNiklpe98yYX+NTFM37LunpsYtZTOlO0q6Z0EPTnp00pP/
-eXZW15ld+75yphdqemMyevUo0mPGLJFZn/nnPg1lnKjPhbmKusy+H9b9+NdQn2zzbcLtnUt90dEvHQY1
-qH9Qf6o0Smc;
-</pre>
+if c &gt;= 0:
+	mem1 = set 0
+	mem2 = foreachdir nw,w,sw,n,s,ne,e,se:
+		if mem2 &gt;= 0:
+			if mem1 == 7:
+				mem1 = set 8
+			endif
+			if mem1 == 6:
+				mem1 = set 7
+			endif
+			if mem1 == 5:
+				mem1 = set 6
+			endif
+			if mem1 == 4:
+				mem1 = set 5
+			endif
+			if mem1 == 3:
+				mem1 = set 4
+			endif
+			if mem1 == 2:
+				mem1 = set 3
+			endif
+			if mem1 == 1:
+				mem1 = set 2
+			endif
+			if mem1 == 0:
+				mem1 = set 1
+			endif
+		endif
+	endfor
+	pickup c
+	write mem1
+	drop
+endif
+jump a</pre>
             </div>
         </div>
     </div>

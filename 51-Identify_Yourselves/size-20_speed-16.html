@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 32</a> » 19 commands / 34 seconds
-    <h2>19 commands / 34 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 51</a> » 20 commands / 16 seconds
+    <h2>20 commands / 16 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -34,37 +34,42 @@
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2087) --
--- 32: Creative Writhing --
+                <pre>-- 7 Billion Humans (2145) --
+-- 51: Identify Yourselves --
 
 -- Author: landfillbaby
--- Size: 19
--- Speed: 34
+-- Size: 20
+-- Speed: 16
 
-a:
-pickup s
-write 99
-drop
-if sw == 0:
-	step w
-else:
-	if se == 0:
-		step e
-	else:
-		jump b
-	endif
+step s
+pickup c
+if w == nothing:
+	write 1
+	jump a
 endif
-pickup s
-write 99
-drop
-step s
-pickup s
-write 99
-drop
+if e == nothing:
+	write 10
+	jump b
+endif
+write 0
+c:
+mem1 = set w
+if mem1 &gt; 0:
+	mem1 = calc mem1 + 1
+	jump d
+endif
+mem1 = set e
+if mem1 &gt; 0:
+	mem1 = calc mem1 - 1
+	jump e
+endif
+jump c
+d:
+e:
+write mem1
+a:
 b:
-step s
-jump a
-</pre>
+drop</pre>
             </div>
         </div>
     </div>

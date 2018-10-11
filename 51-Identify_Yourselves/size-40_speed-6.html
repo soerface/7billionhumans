@@ -20,84 +20,85 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 30</a> » 35 commands / 97 seconds
-    <h2>35 commands / 97 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 51</a> » 40 commands / 6 seconds
+    <h2>40 commands / 6 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
-                    <h3>Sören Wegener</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                    <img src="https://avatars0.githubusercontent.com/u/20822924?v=4">
+                    <h3>lucy phipps</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/landfillbaby">landfillbaby</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
--- 30: Fill the Floor --
+                <pre>-- 7 Billion Humans (2145) --
+-- 51: Identify Yourselves --
 
--- Author: soerface
 -- Author: landfillbaby
--- Size: 35
--- Speed: 97
+-- Size: 40
+-- Speed: 6
 
-mem1 = nearest printer
-if n == wall and
- w == nothing and
- e == worker:
-	a:
-	takefrom mem1
-	step se
-	step se
-	step e
-	step e
-	step e
-	b:
-	if c == nothing:
-		drop
-		jump a
-	endif
-	if e == wall:
-		step sw
-		step w
-	else:
-		step e
-	endif
+pickup s
+if w != worker:
+	step s
+	write 1
+	jump a
+endif
+if e != worker:
+	step s
+	write 10
 	jump b
 endif
-takefrom mem1
-step nw
-step nw
-step w
-step w
-c:
-if c != nothing:
+if w != worker:
 	step s
+	write 2
 	jump c
 endif
-comment 0
-d:
-drop
-mem2 = nearest datacube
-takefrom mem1
-step mem2
-if e == printer:
-	step se
-	step ne
-else:
-	step e
+if e != worker:
+	step s
+	write 9
+	jump d
 endif
-jump d
-
-
-DEFINE COMMENT 0
-eJztjk9HhHEUhZ+PkCkRGQ1p8TZGlBYjidpERMtpjMzilWSkRWkkR4vaNbMcLaJ/kmgifYB5p6JFtOrz
-dH6/j5G5PK5773HOXQc0xAQ5yspRJ8zDjDNKXgXycR7xbcwUWAwzCUUlVDXNVrzPkpg6c6QssxM1q1at
-ccAGe1RosMlu3B9RMlUdcqpjmpxbEzxazKvNiklpe98yYX+NTFM37LunpsYtZTOlO0q6Z0EPTnp00pP/
-eXZW15ld+75yphdqemMyevUo0mPGLJFZn/nnPg1lnKjPhbmKusy+H9b9+NdQn2zzbcLtnUt90dEvHQY1
-qH9Qf6o0Smc;
-</pre>
+if w != worker:
+	step s
+	write 3
+	jump e
+endif
+if e != worker:
+	step s
+	write 8
+	jump f
+endif
+if w != worker:
+	step s
+	write 4
+	jump g
+endif
+if e != worker:
+	step s
+	write 7
+	jump h
+endif
+if w != worker:
+	step s
+	write 5
+	jump i
+endif
+step s
+write 6
+a:
+b:
+c:
+d:
+e:
+f:
+g:
+h:
+i:
+drop</pre>
             </div>
         </div>
     </div>

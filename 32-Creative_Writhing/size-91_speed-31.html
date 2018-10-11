@@ -20,84 +20,123 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 30</a> » 35 commands / 97 seconds
-    <h2>35 commands / 97 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 32</a> » 91 commands / 31 seconds
+    <h2>91 commands / 31 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
                 
-                    <img src="https://avatars1.githubusercontent.com/u/967243?v=4">
-                    <h3>Sören Wegener</h3>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/soerface">soerface</a></p>
+                    <img src="https://avatars0.githubusercontent.com/u/9501177?v=4">
+                    <h3>None</h3>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/ansvonwa">ansvonwa</a></p>
                 
             </div>
         </div>
         <div class="col-md-6">
             <div class="card sourcecode">
-                <pre>-- 7 Billion Humans (2053) --
--- 30: Fill the Floor --
+                <pre>-- 7 Billion Humans (2145) --
+-- 32: Creative Writhing --
 
--- Author: soerface
+-- Author: ansvonwa
 -- Author: landfillbaby
--- Size: 35
--- Speed: 97
+-- Size: 91
+-- Speed: 31
 
-mem1 = nearest printer
-if n == wall and
- w == nothing and
- e == worker:
-	a:
-	takefrom mem1
-	step se
-	step se
-	step e
-	step e
-	step e
-	b:
-	if c == nothing:
-		drop
-		jump a
-	endif
-	if e == wall:
-		step sw
-		step w
-	else:
-		step e
-	endif
-	jump b
-endif
-takefrom mem1
-step nw
-step nw
-step w
-step w
-c:
-if c != nothing:
-	step s
-	jump c
-endif
-comment 0
-d:
+pickup s
+write 99
 drop
-mem2 = nearest datacube
-takefrom mem1
-step mem2
-if e == printer:
-	step se
-	step ne
-else:
+if sw == 0:
+	step w
+	pickup s
+	write 99
+	drop
+	step s
+	pickup s
+	write 99
+	drop
+	step s
+	pickup s
+	write 99
+	drop
 	step e
+	pickup s
+	write 99
+	drop
+	step s
+	pickup s
+	write 99
+	drop
+	jump a
 endif
-jump d
-
-
-DEFINE COMMENT 0
-eJztjk9HhHEUhZ+PkCkRGQ1p8TZGlBYjidpERMtpjMzilWSkRWkkR4vaNbMcLaJ/kmgifYB5p6JFtOrz
-dH6/j5G5PK5773HOXQc0xAQ5yspRJ8zDjDNKXgXycR7xbcwUWAwzCUUlVDXNVrzPkpg6c6QssxM1q1at
-ccAGe1RosMlu3B9RMlUdcqpjmpxbEzxazKvNiklpe98yYX+NTFM37LunpsYtZTOlO0q6Z0EPTnp00pP/
-eXZW15ld+75yphdqemMyevUo0mPGLJFZn/nnPg1lnKjPhbmKusy+H9b9+NdQn2zzbcLtnUt90dEvHQY1
-qH9Qf6o0Smc;
-</pre>
+step s
+if sw == 0:
+	pickup s
+	write 99
+	drop
+	step w
+	pickup s
+	write 99
+	drop
+	step s
+	pickup s
+	write 99
+	drop
+	step s
+endif
+pickup s
+write 99
+drop
+step e
+pickup s
+write 99
+drop
+a:
+step s
+pickup s
+write 99
+drop
+step s
+pickup s
+write 99
+drop
+step w
+pickup s
+write 99
+drop
+step s
+pickup s
+write 99
+drop
+step s
+pickup s
+write 99
+drop
+if se != 0:
+	step s
+	pickup s
+	write 99
+	drop
+endif
+step e
+pickup s
+write 99
+drop
+step s
+pickup s
+write 99
+drop
+step s
+pickup s
+write 99
+drop
+step w
+pickup s
+write 99
+drop
+step s
+pickup s
+write 99
+drop</pre>
             </div>
         </div>
     </div>
