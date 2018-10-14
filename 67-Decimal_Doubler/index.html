@@ -77,10 +77,10 @@
         var solutionsPlot = document.getElementById('solutionsPlot');
 
         data = [{
-            x: [32],
-            y: [288],
+            x: [25, 32],
+            y: [940, 288],
             type: 'pointcloud',
-            text: ["by soerface",],
+            text: ["by soerface","by soerface",],
             mode: 'markers',
             marker: {
                 sizemin: 60,
@@ -96,7 +96,7 @@
             },
             yaxis: {
                 title: 'Speed',
-                range: [0, 316.8]
+                range: [0, 1034.0]
             },
             shapes: [
                 
@@ -190,10 +190,22 @@
                         "source": "https://avatars.githubusercontent.com/soerface",
                         "xref": "x",
                         "yref": "y",
+                        "x": 25,
+                        "y": 940,
+                        "sizex": 8.8,
+                        "sizey": 258.5,
+                        "xanchor": "center",
+                        "yanchor": "middle"
+                    },
+                
+                    {
+                        "source": "https://avatars.githubusercontent.com/soerface",
+                        "xref": "x",
+                        "yref": "y",
                         "x": 32,
                         "y": 288,
                         "sizex": 8.8,
-                        "sizey": 79.2,
+                        "sizey": 258.5,
                         "xanchor": "center",
                         "yanchor": "middle"
                     },
