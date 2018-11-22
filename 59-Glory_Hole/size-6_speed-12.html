@@ -20,8 +20,8 @@
         <a class="navbar-brand" href="../">7 Billion Humans</a>
     </nav>
     
-    <a href="../">Overview</a> » <a href=".">Year 59</a> » 7 commands / 12 seconds
-    <h2>7 commands / 12 seconds</h2>
+    <a href="../">Overview</a> » <a href=".">Year 59</a> » 6 commands / 12 seconds
+    <h2>6 commands / 12 seconds</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="card userprofile">
@@ -38,21 +38,21 @@
 -- 59: Glory Hole --
 
 -- Author: landfillbaby
--- Size: 7
+-- Size: 6
 -- Speed: 12
 
 mem1 = nearest datacube
-step mem1
 a:
+step mem1
 mem2 = foreachdir nw,w,sw,n,s,ne,se:
 	if mem1 == 1 and
 	 mem2 == hole or
 	 mem2 &lt; mem1:
 		mem1 = set mem2
-		step mem1
 		jump a
 	endif
-endfor</pre>
+endfor
+</pre>
             </div>
         </div>
     </div>
