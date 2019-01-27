@@ -1,7 +1,9 @@
 -- 7 Billion Humans (2215) --
 -- 13: Injection Sites 2 --
--- author nkaabi --
--- size 15, speed 16 --
+
+-- Author: nkaabi
+-- Size: 15
+-- Speed: 16
 
 pickup s
 a:
