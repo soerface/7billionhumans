@@ -4,7 +4,7 @@
 -- Author: DeepAQ
 -- Size: 16
 -- Speed: 31
--- Speed Tests: 29, 30, 32, 32, 31, 29, 32
+-- Speed Tests: 29, 30, 32, 32, 31, 29, 32, 31, 31, 33, 31, 30, 32
 
 mem2 = nearest hole
 mem3 = nearest shredder
