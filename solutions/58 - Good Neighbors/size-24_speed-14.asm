@@ -1,6 +1,11 @@
 -- 7 Billion Humans (2053) --
 -- 58: Good Neighbors --
- mem1 = nearest wall
+
+-- Author: Blanvillain
+-- Size: 24
+-- Speed: 14
+
+mem1 = nearest wall
 step mem1
 if n == wall and
  w != worker and
