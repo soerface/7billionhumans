@@ -3,8 +3,8 @@
 
 -- Author: yaheath
 -- Size: 46
--- Speed: 112
--- Speed Tests: 112, 112, 112, 113
+-- Speed: 113
+-- Speed Tests: 112, 112, 112, 113, 113, 113, 113, 112, 114, 113, 111, 113, 112, 113, 113, 113, 112, 113
 
 mem4 = nearest wall
 step sw
@@ -23,7 +23,7 @@ step e
 step e
 mem3 = nearest datacube
 b:
-stem mem4
+step mem4
 c:
 mem2 = nearest datacube
 step mem2
