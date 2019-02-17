@@ -1,5 +1,9 @@
 -- 7 Billion Humans (2144) --
--- 58: Ruhige Nachbarschaft --
+-- 58: Good Neighbors --
+
+-- Author: 68erdirk
+-- Size: 27
+-- Speed: 12
 
 mem1 = nearest wall
 step mem1
