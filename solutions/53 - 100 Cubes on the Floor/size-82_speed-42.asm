@@ -2,7 +2,7 @@
 -- 53: 100 Cubes on the Floor --
 
 -- Author: ansvonwa
--- Size: 82
+-- Size: 40
 -- Speed: 42
 
 if ne == wall or
