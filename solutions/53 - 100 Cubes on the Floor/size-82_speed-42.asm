@@ -50,53 +50,10 @@ else:
 	step w
 endif
 step w
+a:
 pickup c
 write mem1
 drop
 step w
 mem1 = calc mem1 - 1
-pickup c
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-step w
-pickup c
-mem1 = calc mem1 - 1
-write mem1
-drop
-
-
+jump a
