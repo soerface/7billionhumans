@@ -2,10 +2,10 @@
 -- 61: Lazy Pathways --
 
 -- Author: 68erDirk
--- Size: 26
--- Speed: 180 (average)
+-- Size: 25
+-- Speed: 185 (average)
 
-step w
+
 step w
 step w
 a:
