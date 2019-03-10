@@ -2,7 +2,7 @@
 -- 67: Decimal Doubler --
 
 -- Author: Tiza59
--- Size: 21
+-- Size: 20
 -- Speed: 219
 
 step s
