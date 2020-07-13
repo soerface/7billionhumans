@@ -1,0 +1,60 @@
+-- 7 Billion Humans (2053) --
+-- 41: Image Decrypter --
+
+-- Author: 68erDirk
+-- Size: 40
+-- Speed: 7
+
+-- 7 Billion Humans (2144) --
+-- 41: Bildentschlüsselung --
+
+pickup w
+step w
+mem1 = set myitem
+if mem1 > 8:
+	if mem1 > 10:
+		if mem1 == 12:
+			step w
+		endif
+		step w
+		a:
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		drop
+		mem1 = calc 1 / 0
+	else:
+		if mem1 == 10:
+			jump a
+		else:
+			step w
+			step w
+		endif
+	endif
+endif
+if mem1 >= 6:
+	if mem1 >= 7:
+		step w
+	endif
+	step w
+endif
+if mem1 >= 4:
+	if mem1 >= 5:
+		step w
+	endif
+	step w
+endif
+if mem1 >= 3:
+	step w
+	step w
+endif
+step w
+drop
+mem1 = calc 1 / 0
