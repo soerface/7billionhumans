@@ -1,34 +1,29 @@
--- 7 Billion Humans (2087) --
+-- 7 Billion Humans (2234) --
 -- 10: Emergency Escapades --
 
 -- Author: landfillbaby
--- Size: 27
--- Speed: 16
+-- Size: 26
+-- Speed: 13
 
-step w
-step w
-a:
-b:
-step w
-if c != 1 and
- s != wall:
-	jump b
-endif
 if s == wall:
 	step nw
+endif
+step w
+a:
+step w
+if w != 1:
 	jump a
 endif
+step w
 if nw != hole:
 	step nw
-	jump c
+else:
+	if w != hole:
+		step w
+	else:
+		step sw
+	endif
 endif
-if w != hole:
-	step w
-	jump d
-endif
-step sw
-d:
-c:
 step sw
 step s
 step sw
