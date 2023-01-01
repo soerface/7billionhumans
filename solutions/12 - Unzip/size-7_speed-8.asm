@@ -12,7 +12,7 @@ if nw == wall or
  sw == 0:
 	step n
 endif
-if se == wall and
+if e == wall and
  w == 0 or
  ne == 0 or
  nw == 0:

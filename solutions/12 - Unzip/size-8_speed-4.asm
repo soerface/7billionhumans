@@ -10,13 +10,14 @@ a:
 if sw != nothing or
  se == worker:
 	step n
-	drop
+	jump b
 endif
-if ne != nothing or
- nw == worker:
-	step s
-	drop
+if ne == nothing and
+ nw != worker:
+	jump a
 endif
-jump a
+step s
+b:
+drop
 
 
