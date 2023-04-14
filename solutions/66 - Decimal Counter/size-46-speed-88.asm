@@ -2,18 +2,17 @@
 -- 66: Decimal Counter --
 
 -- Author: davidgauch
--- Size: 47
+-- Size: 46
 -- Speed: 88
 
 step s
 pickup c
+a:
 step s
+tell nw go
 if myitem != datacube:
-	a:
-	tell nw go
 	step n
 	listenfor ready
-	step s
 	jump a
 endif
 b:
