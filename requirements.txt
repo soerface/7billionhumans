@@ -2,4 +2,4 @@ Jinja2==2.11.2
 MarkupSafe==1.0
 Pygments==2.2.0
 antlr4-python3-runtime
-requests==2.20.0
+requests==2.31.0
