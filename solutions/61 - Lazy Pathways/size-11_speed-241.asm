@@ -4,6 +4,7 @@
 -- Author: soerface
 -- Size: 11
 -- Speed: 241
+
 a:
 step nw,w,sw,n,s,e
 if c == datacube and

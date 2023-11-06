@@ -27,3 +27,5 @@ write mem2
 drop
 mem2 = calc mem2 + mem1
 jump a
+
+

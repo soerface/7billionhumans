@@ -91,3 +91,5 @@ n:
 pickup mem1
 write mem3
 drop
+
+

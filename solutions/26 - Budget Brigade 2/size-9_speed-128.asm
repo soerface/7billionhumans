@@ -25,3 +25,5 @@ if myitem >= 50 and
 	giveto e
 endif
 jump a
+
+

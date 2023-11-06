@@ -9,3 +9,5 @@ mem1 = nearest shredder
 mem2 = nearest datacube
 pickup mem2
 giveto mem1
+
+

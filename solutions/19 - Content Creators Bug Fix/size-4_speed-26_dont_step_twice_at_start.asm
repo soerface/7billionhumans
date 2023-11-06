@@ -10,3 +10,5 @@ a:
 giveto se
 takefrom sw
 jump a
+
+

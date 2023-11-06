@@ -9,3 +9,5 @@ mem1 = nearest shredder
 pickup s
 giveto mem1
 step e
+
+

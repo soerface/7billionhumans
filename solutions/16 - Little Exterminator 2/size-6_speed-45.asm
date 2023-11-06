@@ -14,3 +14,5 @@ step e
 pickup s
 giveto se
 jump a
+
+

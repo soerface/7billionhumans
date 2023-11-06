@@ -9,3 +9,5 @@ mem1 = calc s + 1
 pickup s
 write mem1
 drop
+
+

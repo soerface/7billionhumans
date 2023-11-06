@@ -10,3 +10,5 @@ step s
 pickup n
 drop
 jump a
+
+

@@ -20,3 +20,5 @@ pickup c
 write mem2
 drop
 jump b
+
+

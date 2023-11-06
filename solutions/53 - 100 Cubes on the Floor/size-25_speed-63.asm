@@ -44,3 +44,5 @@ step w
 pickup c
 mem1 = calc mem1 - 1
 jump g
+
+

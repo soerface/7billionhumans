@@ -23,3 +23,5 @@ if w != wall:
 	step w
 	jump b
 endif
+
+

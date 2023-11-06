@@ -26,3 +26,5 @@ mem2 = calc mem2 - 1
 write mem2
 step n
 jump b
+
+

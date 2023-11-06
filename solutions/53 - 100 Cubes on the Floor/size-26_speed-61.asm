@@ -44,3 +44,5 @@ if w != wall:
 	mem1 = calc mem1 - 1
 	jump g
 endif
+
+

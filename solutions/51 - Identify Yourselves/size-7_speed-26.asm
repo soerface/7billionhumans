@@ -14,3 +14,5 @@ step s
 pickup c
 write mem1
 drop
+
+
