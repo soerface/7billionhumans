@@ -1,11 +1,12 @@
 -- 7 Billion Humans (2056) --
 -- 44: Unique Fashion Party --
 
--- Author: landfillbaby, modified by KuriyamaMirai
--- Size: 
+-- Author: landfillbaby
+-- Author: KuriyamaMirai
+-- Size: 5
 -- Speed: 62
 -- Speed Tests: 67, 55, 63, 63, 63, 63, 65, 67, 55, 62
--- Success Rate: 250 / 250
+-- Success Rate: 250/250
 
 pickup s
 a:
@@ -16,3 +17,5 @@ if n == myitem or
 	mem1 = calc 0 / 0
 endif
 jump a
+
+

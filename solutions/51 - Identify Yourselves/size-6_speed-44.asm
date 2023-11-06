@@ -12,3 +12,5 @@ mem1 = calc w + 1
 write mem1
 drop
 jump a
+
+

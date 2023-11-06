@@ -13,3 +13,5 @@ if s == worker:
 	jump a
 endif
 giveto s
+
+

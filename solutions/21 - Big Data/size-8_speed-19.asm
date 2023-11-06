@@ -15,3 +15,5 @@ if myitem < 50:
 	giveto sw
 	jump a
 endif
+
+

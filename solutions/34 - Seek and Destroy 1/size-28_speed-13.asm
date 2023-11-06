@@ -40,3 +40,5 @@ if c < mem1:
 endif
 pickup mem1
 giveto mem4
+
+

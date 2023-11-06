@@ -24,3 +24,5 @@ takefrom mem1
 step mem2
 step w
 jump b
+
+

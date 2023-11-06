@@ -14,3 +14,5 @@ if mem1 > myitem:
 	mem1 = calc 0 / 0
 endif
 jump a
+
+

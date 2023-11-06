@@ -8,3 +8,5 @@
 step s
 pickup c
 drop
+
+

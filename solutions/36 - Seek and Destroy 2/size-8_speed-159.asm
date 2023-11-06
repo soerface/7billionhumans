@@ -17,3 +17,5 @@ if n == wall:
 	giveto mem2
 endif
 jump a
+
+

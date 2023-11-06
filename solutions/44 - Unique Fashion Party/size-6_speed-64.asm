@@ -5,7 +5,7 @@
 -- Size: 6
 -- Speed: 64
 -- Speed Tests: 63, 66, 63, 65, 67, 68, 66, 63, 60, 60, 63
--- Success Rate: 249 / 250
+-- Success Rate: 249/250
 
 pickup s
 a:
@@ -17,3 +17,5 @@ if n == myitem or
 	step mem1
 endif
 jump a
+
+

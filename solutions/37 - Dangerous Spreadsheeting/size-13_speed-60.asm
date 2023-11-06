@@ -22,3 +22,5 @@ drop
 if e != wall:
 	jump a
 endif
+
+

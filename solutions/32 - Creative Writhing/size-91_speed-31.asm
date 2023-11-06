@@ -101,3 +101,5 @@ step s
 pickup s
 write 99
 drop
+
+

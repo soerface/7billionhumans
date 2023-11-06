@@ -10,3 +10,5 @@ pickup c
 a:
 step e
 jump a
+
+

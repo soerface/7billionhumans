@@ -14,3 +14,5 @@ if c == nothing:
 endif
 step nw,sw,ne,se
 jump a
+
+

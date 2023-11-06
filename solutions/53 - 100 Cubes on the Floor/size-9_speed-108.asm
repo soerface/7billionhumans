@@ -22,3 +22,5 @@ if w == wall or
 	mem1 = calc mem1 + 1
 endif
 jump a
+
+

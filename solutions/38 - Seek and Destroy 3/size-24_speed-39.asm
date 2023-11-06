@@ -43,3 +43,5 @@ if n == wall:
 else:
 	jump a
 endif
+
+

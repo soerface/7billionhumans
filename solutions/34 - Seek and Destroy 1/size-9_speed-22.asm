@@ -18,3 +18,5 @@ if n != wall:
 endif
 pickup mem1
 giveto mem2
+
+

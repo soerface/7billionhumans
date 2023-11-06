@@ -25,3 +25,5 @@ mem1 = foreachdir nw,w,sw,n,s,ne,e,se:
 endfor
 write mem2
 drop
+
+

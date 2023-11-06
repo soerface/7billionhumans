@@ -112,3 +112,5 @@ pickup c
 mem1 = calc mem1 - 1
 write mem1
 drop
+
+

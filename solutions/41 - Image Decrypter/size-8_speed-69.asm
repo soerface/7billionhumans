@@ -15,3 +15,5 @@ if mem1 <= 0:
 	step ne
 endif
 jump a
+
+

@@ -11,3 +11,5 @@ pickup c
 step nw,w,sw,n,s,ne,e,se
 drop
 jump a
+
+

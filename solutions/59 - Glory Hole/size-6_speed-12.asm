@@ -16,3 +16,5 @@ mem2 = foreachdir nw,w,sw,n,s,ne,se:
 		jump a
 	endif
 endfor
+
+

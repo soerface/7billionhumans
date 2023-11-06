@@ -16,3 +16,5 @@ mem1 = foreachdir nw,w,sw,n,s,ne,e,se:
 endfor
 pickup mem2
 giveto mem3
+
+

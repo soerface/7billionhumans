@@ -57,3 +57,5 @@ drop
 step w
 mem1 = calc mem1 - 1
 jump a
+
+

@@ -31,3 +31,5 @@ else:
 	step nw,w,sw,n,s,e
 endif
 jump a
+
+
